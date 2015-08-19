@@ -1,0 +1,108 @@
+//
+// Status styles
+// --------------------------------------
+.status {
+  border-bottom-style: solid;
+
+  @include breakpoint(max-width $bp-desktop) {
+    border-bottom-width: 3px;
+    line-height: 1;
+    padding-bottom: .5em;
+    @include font-size(h5);
+  }
+
+  @include breakpoint($bp-desktop) {
+    border-bottom-width: 3px;
+    text-align: right;
+    margin-left: -.5em;
+    margin-right: -.5em;
+    padding-bottom: .5em;
+    padding-left: .5em;
+    padding-right: .5em;
+  }
+}
+
+.status-label {
+  color: palette(base, dark);
+
+  @include breakpoint(max-width $bp-desktop) {
+    display: inline-block;
+    margin-right: .25em;
+
+    &:after {
+      content: ':';
+    }
+  }
+
+  @include breakpoint($bp-desktop) {
+    line-height: 1;
+  }
+}
+
+.status-message {
+  font-weight: 600;
+
+  @include breakpoint(max-width $bp-desktop) {
+    display: inline-block;
+  }
+
+  @include breakpoint($bp-desktop) {
+    line-height: 1.2;
+    @include font-size(h5);
+  }
+}
+
+
+// Position status
+// --------------------------------------
+.position {
+  line-height: 1;
+
+  @include breakpoint(max-width $bp-desktop) {
+    margin-bottom: 0;
+  }
+}
+
+.position-queue {
+  @include font-size(h5);
+}
+
+.position-copies {}
+
+
+// Status colors
+// --------------------------------------
+.status-base {
+  border-bottom-color: palette(base, dark);
+  color: palette(base, dark);
+}
+
+.status-active {
+  border-bottom-color: palette(secondary, light);
+}
+
+.status-danger {
+  border-bottom-color: palette(danger);
+  color: palette(danger);
+}
+
+
+// Status text colors
+// --------------------------------------
+.text-base {
+  color: palette(base, dark);
+}
+
+.text-danger {
+  color: palette(danger);
+}
+
+.text-warning {
+  color: palette(warning);
+}
+
+// Status overrides
+// --------------------------------------
+.has-overdue {
+  border-color: palette(danger) !important;
+}

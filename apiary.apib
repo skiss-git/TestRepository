@@ -1,0 +1,1281 @@
+FORMAT: 1A
+
+# Services supporting Your Account project
+
+This is a working document for defining services related to the current Your Account project at [Toronto Public Library](http://www.torontopubliclibrary.ca/.). The services themselves are being designed to be re-used beyond the scope and timeline of the Your Account project. While most services are wrappers around Symphony API calls, they are structured to be generally extendable to other library SOA resources in the future.
+
+## Conventions
+
+### Completeness Status of Services
+
+- **Stable** : service definition considered complete
+- **Stable, Possible Additions** : existing definition considered complete, but more services or data fields may be added
+- **In Progress** : service defintion being worked on, unstable
+- **Incomplete** : service definition not yet started
+
+### Referencing data objects
+
+An empty object as part of an example JSON structure represents an included nested data object.
+
+In the structure below, "format" represents included nested data objects as indicated by the attribute list.
+
+- **format** *required*: **Format** object
+
+
+        "item": {
+            "id":"123456789",
+            "url":"http://torontopubliclibrary.com/items/?id=12345"
+            "title":"Sense and Sensibility",
+            "author":"Jane Austen",
+            "format": {}
+            "cover": {}
+        }  
+        
+### Authentication 
+
+All authenticated calls to TPLWS will include a HTTP header with the authentication token provide by one of the various login calls.
+        
+        TPLWS-Authenticate: s7df7ds6fs7
+        
+## Standard Errors
+
+As with any web service, a properly-structured request to TPLWS may fail because TPLWS itself or an upstream system supporting it fails. These HTTP status codes and error structures should be standard responses in those scenarios:
+
+### TPLWS Server Error
+
+Return a 500 (Internal Server Error) status code and this error structure:
+
+        "error": {
+            "description":"TPLWS Error",
+            "errorCode":"TPLWSERROR"
+        }
+
+### Upstream System Failure
+
+Return a 502 (Bad Gateway) status code and this error structure (the example below is for Symphony unavailiablity; other systems will need different responses):
+
+        "error": {
+            "description":"Symphony Unavailable",
+            "errorCode":"SYMPHONYUNAVAILABLE"
+        }
+
+# Group Users
+
+User-related resources. Under the current model all other account-related resources (Charges, Checkouts, Holds) belong to a specific User.
+Both primary user endpoint variations /users/ and /users/userKey/ can be used in the path for all resources (Charges, Checkouts, Holds) belonging to a specific User.
+## Status
+
+- *Expected requests and responses*: Stable, Possible Additions.
+- *Error conditions*: Stable, Possible Additions.
+- *Service Levels*: Incomplete.
+
+## Attributes
+
+
+- **id** *required*: globally unique ID of the user (patronDB ID for /users/, Symphony UserKey for /users/userKey operations)
+- **libraryBarcode** *required*: Bar code of the user's library card
+- **userName** *optional*: User name / alias / screen name / preferred name
+- **address** *required*: an object containing any available address information. The object has the following attributes:
+     - **street** *optional*: Street number and name
+     - **unit** *optional*: Apartment or unit number
+     - **city** *optional*: City
+     - **province** *optional*: Province
+     - **postalCode** *optional*: Postal code
+     - **phone** *optional*: Phone #
+     - **email** *optional*: Email address
+- **personalInfo** *required*: an object containing available personal information about the user.
+     - **displayName** *optional*: User's real name
+     - **birthDate** *optional*: User's birth date (YYYY/MM/DD).
+- **circulationSummary** *required*: an object containing a numeric summary of the user's current circulation status.
+     - **numberOfCheckouts** *required*: Number of checked-out items. Can be 0. (int)
+     - **numberOfOverdues** *required*: Number of overdue items. (int)
+     - **numberOfDueSoonCheckouts** *required*: Number of checked-out items that are not yet overdue but will become overdue in less than 3 days from today. (int)
+     - **numberOfHolds** *required*: Number of items currently on hold. (int)
+     - **numberOfPickupSoonHolds** *required*: Number of items currently available to be picked up with a future readyDateExpiration of less than 3 days from today. (int)
+     - **numberOfAvailableHolds** *required*: Number of holds available to be picked up. (int)
+     - **numberOfInTransitHolds** *required*: Number of items currently in transit. (int)
+     - **estimatedFines** *required*: Dollar value of estimated total fines and charges. (string)
+     - **payableFines** *required*: Dollar value of estimated total fines and charges which are currently outstanding and payable. (string)
+- **membershipInfo** *required*: an object containing information specifically about the user's membership status with the library
+    - **accountType** *require*: The type of TPL account.
+    - **expirationDate** *required*: Date membership will expire (YYYY/MM/DD), requiring renewal.
+    - **status** *required*: User's status as a member. One of:
+         - OK : Member in good standing
+         - DELINQUENT : Has overdue books, unpaid fines or other issues, but not to the extent they're blocked from further service use
+         - BLOCKED : Blocked from borrowing and other library services.
+         - BARRED : Barred.
+- **homeBranch** *required*: a **Location** object indicating the set home branch of the user.         
+- **notificationSettings** *required*: an object containing notification preferences
+    - **preferredName**: name to use in communication
+    - **telephone**: Phone
+    - **email**: Email
+    - **sendBy**: Prefered method of receiving notifications. One of **EMAIL**, **TELEPHONE**, **TTY** or **NO_NOTIFY**.
+    - **reminders**: Whether to receive advance reminders (boolean)
+ 
+## User [/users/{user.id}]
+
+Operations on a single User resources.
+
++ Model (application/json)
+
+    + Body
+
+
+            {
+                "id": "123456",
+                "libaryBarcode": "12345678910110",
+                "userName": "bobinator",
+                "address": {
+                    "street": "123 Main St.",
+                    "unit": "369",
+                    "city": "Toronto",
+                    "province": "ON",
+                    "postalCode": "M4A2B7",
+                    "phone": "416-123-4567",
+                    "email": "bobinator@torontopubliclibrary.ca"
+                },
+                "personalInfo": {
+                    "displayName": "Inator, Robert",
+                    "birthDate": "1980/06/11"
+                },
+                "circulationSummary": {
+                    "numberOfCheckouts":5,
+                    "numberOfOverdues":1,
+                    "numberOfDueSoonCheckouts":1,
+                    "numberOfHolds":3,
+                    "numberOfAvailableHolds":1,
+                    "numberOfPickupSoonHolds":0,
+                    "numberOfInTransitHolds":1,
+                    "estimatedFines":"5.00",
+                    "payableFines":"5.00"
+                },
+                "membershipInfo": {
+                    "accountType": "Adult"
+                    "expirationDate": "2014/02/08",
+                    "status":"OK"
+                },
+                "homeBranch": {
+                    "id":"CED",
+                    "description":"Cedarbrae"
+                }
+                "notificationSettings": {
+                     "preferredName": "Robert",
+                     "telephone": "123-456-7890",
+                     "email": "bobinator@torontopubliclibrary.ca",
+                     "sendBy": "EMAIL",
+                     "reminders": true
+                }
+            }
+
+### Get User Information [GET]
+
+### Success ###
+
+Return a 200 (OK) response and a JSON structure containing the user information.
+
+### Failures ###
+
+- User Not Found: Returns a 404 (Not Found) and an error structure.
+
++ Request (application/json)
+
+    + Headers
+
+            TPLWS-Authenticate: d7f6a8ds7f6s
+            
++ Response 200
+
+    [User][]
+
++ Response 404 (application/json)
+
+            {
+                "error": {
+                    "description":"User not found",
+                    "errorCode":"USERNOTFOUND"
+                }
+            }
+
+### Update a User [PUT]
+
+Modify an existing user. At this time (2015-03-12) the functionality is limited to these fields:
+* PIN (the changed PIN will not be displayed in the returned information object)
+* Home Branch
+
+This endpoint's functionality may be extended in the future to allow other information to be updated.
+
+### Success ###
+
+Return a 200 (OK) response and a JSON structure containing the updated user information.
+
+### Failures ###
+
+- User Not Found: Returns a 404 (Not Found) and an error structure.
+
++ Request (application/json)
+
+   + Headers
+
+            TPLWS-Authenticate: d7f6a8ds7f6s
+
+    + Body
+    
+            {"pin":"1234",            
+                "homeBranch": {
+                    "id":"CED"
+                }
+            }
+    
+
++ Response 200
+
+    [User][]
+
+
++ Response 404 (application/json)
+
+            {
+                "error": {
+                    "description":"User not found",
+                    "errorCode":"USERNOTFOUND"
+                }
+            }
+            
+
+## User [/users/userKey/{user.key}]
+
+Operations on a single User resources using the Symphony userKey.
+
+### Get User Information [GET]
+
+### Success ###
+
+Return a 200 (OK) response and a JSON structure containing the user information.
+
+### Failures ###
+
+- User Not Found: Returns a 404 (Not Found) and an error structure.
+
++ Response 200 
+
+    [User][]
+
++ Response 404 (application/json)
+
+            {
+                "error": {
+                    "description":"User not found",
+                    "errorCode":"USERNOTFOUND"
+                }
+            }
+            
+### Update a User [PUT]
+
+Modify an existing user's branch location
+
+### Success ###
+
+Return a 200 (OK) response and a JSON structure containing the updated user information.
+
+### Failures ###
+
+- User Not Found: Returns a 404 (Not Found) and an error structure.
+
++ Request (application/json)
+
+    + Headers
+
+            TPLWS-Authenticate: d7f6a8ds7f6s
+
+    + Body
+    
+            {
+                "homeBranch": {
+                    "id":"CED"
+                }
+            }
+    
+
++ Response 200
+
+    [User][]
+
+
++ Response 404 (application/json)
+
+            {
+                "error": {
+                    "description":"User not found",
+                    "errorCode":"USERNOTFOUND"
+                }
+            }
+
+# Group Holds
+
+Hold-related resources. Under the current model all Holds belong to a specific User and are accessed through an endpoint including that User's ID. All Hold-related business logic is as per Symphony services. These services are wrappers around the respective Symphony API calls.
+
+## Status
+
+- *Expected requests and responses*: Stable, Possible Additions.
+- *Error conditions*: Stable, Possible Additions.
+- *Service Levels*: Incomplete.
+
+## Attributes
+
+- **id** *required*: globally unique ID of the hold 
+- **item** *required*: An **Item** object
+- **pickupLocation** *required*: A **Location** object
+- **holding** *optional*: A **Holding** object if this hold has an available item
+- **status** *required*: One of
+     - READY : Hold is available to be borrowed by user.
+     - IN_TRANSIT : A specific holding has been selected to fulfill the hold and is in the process of being delivered to the pickup location.
+     - PENDING : User is in the waiting list for the item.
+     - SUSPEND : User is in the waiting list for the item, but hold will not be filled until state is changed to PENDING
+     - PAST : The hold moves into this state after it ceases to be active for the user either because it has been picked up, has expired on the shelf, has been cancelled by the user or library (for various reasons), etc
+- **expiration** *required*: date the hold expires ('YYYY/MM/DD')
+- **readyDate** *optional*: if the hold is in READY status, the date it became ready for pickup ('YYYY/MM/DD')
+- **readyDateExpiration** *optional*: if the hold is in READY status, the date it will become unavailable for pickup by the user ('YYYY/MM/DD')
+- **queuePosition** *required*: user's position in the hold queue (integer)
+- **queueLength** *required*: total length of the hold queue (integer)
+- **suspendStartDate** *optional*: date suspension of the hold began/begins ('YYYY/MM/DD')
+- **suspendEndDate** *optional*: date suspension of the hold ends/ended ('YYYY/MM/DD')
+
+## Hold [/users/{user.id}/holds/{hold.id}]
+
+Endpoint for updating or cancelling a Hold.
+
++ Model (application/json)
+
+    + Body
+
+                {   
+                    "id": "123456",
+                    "expiration": "2014/12/31",
+                    "status":"READY",
+                    "pickupLocation":{},
+                    "queuePosition":5,
+                    "queueLength":47,
+                    "readyDate":"2013/12/14",
+                    "readyDateExpiration":"2013/12/21",
+                    "item": {},
+                    "holding": {}
+                }
+
+### Update a Hold [PUT]
+
+Modify an existing hold's pickup location and/or expiration date.
+
+### Success ###
+
+Return a 200 (OK) response and a JSON structure containing the updated hold information.
+
+### Failures ###
+
+- Hold Not Found: Returns a 404 (Not Found) and an error structure.
+
++ Request (application/json)
+
+    + Headers
+
+            TPLWS-Authenticate: d7f6a8ds7f6s
+
+    + Body
+    
+            {
+                "pickupLocation": {
+                    "id":"CED"
+                },
+                "expiration": "2013/12/31"
+            }
+    
+
++ Response 200
+
+    [Hold][]
+
+
++ Response 404 (application/json)
+
+            {
+                "error": {
+                    "description":"Hold not found",
+                    "errorCode":"HOLDNOTFOUND"
+                }
+            }
+            
+### Cancel a Hold [DELETE]
+
+Cancel an existing Hold.
+
+### Success ###
+
+Return a 204 (No Content) response.
+
+### Failures ###
+
+- Hold Not Found: Returns a 404 (Not Found) and an error structure.
+
++ Request (application/json)
+
+    + Headers
+
+            TPLWS-Authenticate: d7f6a8ds7f6s
+
++ Response 204
+
++ Response 404 (application/json)
+
+            {
+                "error": {
+                    "description":"Hold not found",
+                    "errorCode":"HOLDNOTFOUND"
+                }
+            }
+
+## Suspend Hold [/users/{user.id}/holds/{hold.id}/suspend]
+
+A Hold can be set to SUSPEND status using this its /suspend endpoint. Has no effect if Hold is already in a SUSPEND state.
+
+### Success ###
+
+Return a 201 (Created) response and a JSON structure containing the updated hold information.
+
+### Failures ###
+
+- Hold Not Found: Returns a 404 (Not Found) and an error structure.
+
++ Request (application/json)
+
+    + Headers
+
+            TPLWS-Authenticate: d7f6a8ds7f6s
+            
+### Suspend Hold [PUT]
+
++ Request (application/json)
+
+    + Headers
+
+            TPLWS-Authenticate: d7f6a8ds7f6s
+            
++ Response 201
+
+    [Hold][]
+
+
++ Response 404 (application/json)
+
+            {
+                "error": {
+                    "description":"Hold not found",
+                    "errorCode":"HOLDNOTFOUND"
+                }
+            }
+            
+## Unsuspend Hold [/users/{user.id}/holds/{hold.id}/unsuspend]
+
+A Hold can be set to PENDING status using this its /unsuspend endpoint. Has no effect if Hold is already in a PENDING state.
+
+### Success ###
+
+Return a 201 (Created) response and a JSON structure containing the updated hold information.
+
+### Failures ###
+
+- Hold Not Found: Returns a 404 (Not Found) and an error structure.
+
+### Suspend Hold [PUT]
+
++ Request (application/json)
+
+    + Headers
+
+            TPLWS-Authenticate: d7f6a8ds7f6s
+            
++ Response 201
+
+    [Hold][]
+
++ Response 404 (application/json)
+
+            {
+                "error": {
+                    "description":"Hold not found",
+                    "errorCode":"HOLDNOTFOUND"
+                }
+            }
+            
+
+## Holds Collection [/users/{user.id}/holds{?status}]
+
+Collection of a User's Holds.
+
++ Model (application/json)
+
+    + Body
+
+            
+            [
+                {   
+                    "id": "123456",
+                    "expiration": "2014/12/31",
+                    "status":"READY",
+                    "pickupLocation":{},
+                    "queuePosition":5,
+                    "queueLength":47,
+                    "readyDate":"2013/12/14",
+                    "readyDateExpiration":"2013/12/21",
+                    "item": {},
+                    "holding": {}
+                },
+                {   
+                    "id": "654321",
+                    "expiration": "2014/12/31",
+                    "status":"PENDING",
+                    "pickupLocation":{ },
+                    "queuePosition":"3",
+                    "queueLength":"26",
+                    "suspendStartDate":"2013/12/17",
+                    "suspendEndDate":"2013/12/25",                        
+                    "item": { }
+                }
+            ]
+            
+
+### List User Holds [GET]
+
+Gets list of all holds by this user. May optionally use filters to retrieve holds of only a certain type or types.
+
+Only "status" is expected to be supported as a filter for the first phase of the project, FE:
+
+**/users/{user.id}/holds?status=READY**
+
+**/users/{user.id}/holds?status=PENDING&status=SUSPEND**
+
+### Success ###
+
+Return a 200 (OK) response and a JSON structure containing the user's hold information.
+
+### Failures ###
+
+- User Not Found: Returns a 404 (Not Found) and an error structure.
+
++ Request (application/json)
+
+    + Headers
+
+            TPLWS-Authenticate: d7f6a8ds7f6s
+            
++ Parameters
+    + status (optional, string) ... Filter by one or more of the acceptable status values for a Hold.
+
+
++ Response 200
+
+    [Holds Collection][]
+
++ Response 404 (application/json)
+
+            {
+                "error": {
+                    "description":"User not found",
+                    "errorCode":"USERNOTFOUND"
+                }
+            }
+
+## Hold Creation [/users/{user.id}/holds]
+
+A new Hold is created for a specific User via a POST request. If a pickupLocation Location object is not included, it should default to the user's home branch.
+
+### Success ###
+
+Return a 201 (Created) response and a JSON structure containing the information for the new hold.
+
+### Failures ###
+
+- Item Not Found: Returns a 404 (Not Found) and an error structure.
+- Cannot Be Placed: Returns a 403 (Forbidden) and an error structure with additional information about why the hold cannot be placed.
+
+### Create new hold [POST]
+
++ Request (application/json)
+
+    + Headers
+
+            TPLWS-Authenticate: d7f6a8ds7f6s
+    + Body
+    
+            {
+                "item": {
+                    "id": "123456"
+                },
+                "pickupLocation":{
+                    "id":"CL"
+                }
+            }
+        
++ Response 201
+
+    [Hold][]
+
++ Response 404 (application/json)
+    
+            {
+                "error":{   
+                    "description":"Item not found",
+                    "errorCode":"ITEMNOTFOUND"
+                }
+            }
+
++ Response 403 (application/json)
+
+            {
+                "error": {
+                    "description":"No available copies",
+                    "errorCode":"NOTAVAILABLE"
+                }
+            }
+
+
+# Group Checkouts
+
+Checkout-related resources. Under the current model all Checkouts belong to a specific User and are accessed through an endpoint including that User's ID. All Checkout-related business logic is as per Symphony services. These services are wrappers around the respective Symphony API calls.
+
+## Status
+    
+- *Expected requests and responses*: Stable, Possible Additions.
+- *Error conditions*: Stable, Possible Additions.
+- *Service Levels*: Incomplete.
+
+## Attributes
+
+- **id** *required*: globally unique ID of the checkout 
+- **item** *required*: An **Item** object
+- **holding** *required*: A **Holding** object
+- **overdue** *required*: Boolean indicating if item is overdue.
+- **overdueInfo** *optional*: If item is overdue, a **ChargeInfo** object containing details of the accrued overdue charge.
+- **checkoutDate** *required*: date the checked out item was borrowed ('YYYY/MM/DD')
+- **dueDate** *required*: date the checked out item needs to be returned ('YYYY/MM/DD')
+- **lastRenewedDate** *optional*: date the item was last renewed, if available ('YYYY/MM/DD')
+- **renewals** *optional*: number of times the item has been renewed (can be 0)
+- **renewalsRemaining** *optional*: number of remaining renewals (can be 0)
+
+## Renew Checkout [/users/{user.id}/checkouts/{checkout.id}/renewals]
+
+Endpoint for renewing a checkout
+
++ Model (application/json)
+
+    + Body
+
+                {   
+                    "id": "123456",
+                    "item": {},
+                    "holding":{},
+                    "overdue":"true",
+                    "overdueInfo": {
+                        "id":"OVERDUE",
+                        "description":"Item overdue",
+                        "amount":"0.50"
+                    },
+                    "checkoutDate":"2013/11/16",
+                    "dueDate":"2013/12/28",
+                    "lastRenewedDate":"2013/12/07",
+                    "renewals":1,
+                    "renewalsRemaining":1
+                }
+
+### Renew a checkout [POST]
+
+A renewal request is made by a POST to the renewal endpoint of the specific checkout.
+
+### Success ###
+
+Return a 200 (OK) response and a JSON structure containing the updated checkout information.
+
+### Failures ###
+- Cannot Be Renewed: Returns a 403 (Forbidden) and an error structure with additional information about why the item cannot be renewed. This should be one of the following:
+     - **RENEWALSEXCEEDED**: "Allowed renewals for item exceeded."
+     - **ONHOLDFORANOTHER**: "On hold for another user."
+     - **MEMBERSHIPEXPIRED**: "Membership expired or will expire before renewed item due."
+- Checkout Not Found: Returns a 404 (Not Found) and an error structure.
+
++ Request (application/json)
+
+    + Headers
+
+            TPLWS-Authenticate: d7f6a8ds7f6s
+            
++ Response 200
+
+    [Renew Checkout][]
+
++ Response 403 (application/json)
+
+            {
+                "error": {
+                    "description":"Allowed renewals for item exceeded",
+                    "errorCode":"RENEWALSEXCEEDED"
+                }
+            }
+
++ Response 404 (application/json)
+
+            {
+                "error": {
+                    "description":"Checkout not found",
+                    "errorCode":"CHECKOUTNOTFOUND"
+                }
+            }
+
+## Checkouts Collection [/users/{user.id}/checkouts]
+
+Collection of a User's Checkouts.
+
++ Model (application/json)
+
+    + Body
+
+            
+            [
+                {   
+                    "id": "123456",
+                    "item": {},
+                    "holding":{},
+                    "overdue":"true",
+                    "overdueInfo": {
+                        "id":"OVERDUE",
+                        "description":"Item overdue",
+                        "amount":"0.50"
+                    },                    
+                    "checkoutDate":"2013/11/16",
+                    "dueDate":"2013/12/28",
+                    "lastRenewedDate":"2013/12/07",
+                    "renewals":1,
+                    "renewalsRemaining":1
+                },
+                {   
+                    "id": "654321",
+                    "item": {},
+                    "holding":{},
+                    "overdue":"false",
+                    "checkoutDate":"2013/11/16",
+                    "dueDate":"2013/12/28",
+                    "lastRenewedDate":"2013/12/07",
+                    "renewals":1,
+                    "renewalsRemaining":1
+                }
+            ]
+
+### List User Checkouts [GET]
+
+Gets list of all checkouts by this user.
+
+### Success ###
+
+Return a 200 (OK) response and a JSON structure containing the user's checkout information.
+
+### Failures ###
+
+- User Not Found: Returns a 404 (Not Found) and an error structure.
+
++ Request (application/json)
+
+    + Headers
+
+            TPLWS-Authenticate: d7f6a8ds7f6s
+            
++ Response 200
+
+    [Checkouts Collection][]
+
++ Response 404 (application/json)
+
+            {
+                "error": {
+                    "description":"User not found",
+                    "errorCode":"USERNOTFOUND"
+                }
+            }
+
+# Group Charges
+
+Charge-related resources. Under the current model all Charges belong to a specific User and are accessed through an endpoint including that User's ID. All Charge-related data is returned from Symphony API. These services are wrappers around the respective Symphony API calls.
+
+## Status
+
+- *Expected requests and responses*: Stable, Possible Additions
+- *Error conditions*: Incomplete.
+- *Service Levels*: Incomplete.
+
+## Attributes
+
+- **id** *required*: globally unique ID of the charge 
+- **item** *optional*: An **Item** object if the charge is associated with a specific item, such as a missed hold or overdue book.
+- **holding** *optional*: A **Holding** object if the charge is associated with a specific holding of an item.
+- **billDate** *required*: Date the charge was billed
+- **chargeInfo** *required*: A **ChargeInfo** object containing information specific to the charge such as the cause of the charge and what the user owes.
+
+## Charge [/users/{user.id}/charges/{charge.id}]
+
+A single **Charge** object.
+
++ Model (application/json)
+
+    + Body
+
+            {   
+                "id":"123456",
+                "item": {},
+                "holding": {},
+                "billDate": "2013/12/12",
+                "chargeInfo": {
+                    "chargeCode":"OVERDUE",
+                    "description":"Item overdue",
+                    "amount":"3.50"
+                }  
+            }
+
+## Charges Collection [/users/{user.id}/charges]
+
+Collection of a User's Charges.
+
++ Model (application/json)
+
+    + Body
+
+            
+            [
+                {   
+                    "id":"123456",
+                    "item": {},
+                    "holding": {},
+                    "billDate": "2013/12/12",
+                    "chargeInfo": {
+                        "chargeCode":"OVERDUE",
+                        "description":"Item overdue",
+                        "amount":"3.50"
+                    }  
+                },
+                {   
+                    "id":"234567",
+                    "item": {},
+                    "holding": {},
+                    "billDate": "2013/12/12",
+                    "chargeInfo": {
+                        "chargeCode":"LOSTITEM",
+                        "description":"Item lost",
+                        "amount":"25.00"
+                    }  
+                }
+            ]
+
+### List User Charges [GET]
+
+Gets list of all charges by this user.
+
+### Success ###
+
+Return a 200 (OK) response and a JSON structure containing the user's charge information.
+
+### Failures ###
+
+- User Not Found: Returns a 404 (Not Found) and an error structure.
+
++ Request (application/json)
+
+    + Headers
+
+            TPLWS-Authenticate: d7f6a8ds7f6s
+            
++ Response 200
+
+    [Charges Collection][]
+
++ Response 404 (application/json)
+
+            {
+                "error": {
+                    "description":"User not found",
+                    "errorCode":"USERNOTFOUND"
+                }
+            }
+
+# Group Holdings
+
+This endpoint's current intention is to replace the iBistro approach used on the Endeca-based TPL website to obtain item holdings and is not expected to be used for Your Account at this current time. While modeled on the Holding data object used for Your Account, it is not entirely identical in terms of its fields.
+
+## Status
+
+- *Expected requests and responses*: Stable, Possible Additions
+- *Error conditions*: Incomplete.
+- *Service Levels*: Incomplete.
+
+## Holding Attributes
+
+- **system** *required*: originating system of the Holding (Symphony, Overdrive, etc)
+
+## Symphony Holding Attributes
+
+- **barcode** *required*: item barcode
+- **callNumber** *required*: item call number
+- **format** *required*: **Format** object. This format may differ from the format of the Item in some cases (e.g. Best Bet)
+- **itemLibrary** *required*: Location object to indicate owning library
+- **physicalLocation** *required*: Physical location of the specific holding
+- **status** *required*: Symphony status text field indicating current status of the item, such as IN_TRANSIT, IN_LIBRARY, etc. This is the currentLocation field in Symphony.
+
+## Holdings Collection [/holdings/{item.id}/]
+
+Collection of Holdings. 
+
++ Model (application/json)
+
+    + Body
+
+            
+            [
+                {   
+                    "barcode":"456789",
+                    "callNumber":"FICTION WOL",
+                    "format": {},
+                    "system":"Symphony",
+                    "itemLibrary":{},
+                    "physicalLocation":"Adult Nonfiction",
+                    "status":"IN_LIBRARY"
+                    }  
+                },
+                {   
+                    "barcode":"9876543",
+                    "callNumber":"FICTION WOL",
+                    "format": {},
+                    "system":"Symphony",
+                    "itemLibrary":{},
+                    "physicalLocation":"In Transit"
+                    "status":"IN_TRANSIT"
+                    }  
+                }
+            ]
+
+### List holdings [GET]
+
+Get information about all holdings for a specific item.
+
+### Success ###
+
+Return a 200 (OK) response and a JSON array containing the holdings information.
+
+### Failures ###
+
+- Item Not Found: Returns a 404 (Not Found) and an error structure.
+
++ Request (application/json)
+
+    + Headers
+
+            TPLWS-Authenticate: d7f6a8ds7f6s
+
++ Response 200
+
+    [Holdings Collection][]
+
++ Response 404 (application/json)
+
+            {
+                "error": {
+                    "description":"Item not found",
+                    "errorCode":"ITEMNOTFOUND"
+                }
+            }
+
+# Group Authentication
+
+Endpoints for initiating and invalidating a users session, as well as checking the validity of a session token, getting certain user attributes, and requesting PIN resets.
+
+## Login [/auth/login/]
+
+Logs in a user based on barcode and pin.
+
+### Authenticate User [POST]
+Authenticate a user and return a valid session token.
+
+        { "username": "27131009821", "password": "1234", userprofile:"true", rememberme":false}
+
+### Success ###
+
+Return a 200 response with token and optionally a persistent cookie if requested
+    
+    {"token": "sdf7d6f8s",  "cookie", "s87df6s87df",  "userid":"1234", "userkey":"876543", "barcode":"271310235476", "email":"bob@tpl.ca" }
+
+### Failures ###
+
+Return a 401
+
++ Request (application/json)
+
+        { "username": "27131009821", "password": "1234", "rememberme":true }
+        
++ Response 200 (application/json)
+
+        {"token": "sdf7d6f8s", ,  "cookie", "s87df6s87df",  "userid":"1234", "userkey":"876543", "barcode":"271310235476", "email":"bob@tpl.ca"}
+
++ Response 401 (application/json)
+
+## Logout [/auth/logout/]
+
+    Logs out user based on session token.
+
+### Invalidate Current User Session [POST]
+Ends the current users session and invalidates any tokens or cookies
+
+        { "token": "jhg87uyr76fd5" }
+
+### Success ###
+
+Return a 204 (No Content) response
+
+### Failures ###
+
++ Request (application/json)
+
+        { "token": "jhg87uyr76fd5" }
+
++ Response 204
+
+## Get User ID [/auth/sessionuser/]
+
+    Get the user ID of a patron based on token, and other session information.
+
+### Get User ID [POST]
+
+        { "token": "jhg87uyr76fd5" }
+
+### Success ###
+
+Return a 200 (OK) response and a JSON structure containing the patron ID
+
+        {"userid": "12345"}
+
+### Failures ###
++ Request (application/json)
+
+        { "token": "jhg87uyr76fd5" }
+        
++ Response 200 (application/json)
+
+        {"userid": "12345"}
+
+## Check Token [/auth/sessioninfo/]
+
+    Checks the validity and currentness of a token.
+
+### Check Token Validity [POST]
+
+        { "token": "jhg87uyr76fd5" }
+
+### Success ###
+
+Return a 204 (No Content) response
+
+### Failures ###
+
+Return a 401
++ Request (application/json)
+
+        { "token": "jhg87uyr76fd5" }
+        
++ Response 204
++ Response 401
+
+## Authenticate with Persistent Cookie [/auth/relogin/]
+
+    Get a valid session token based on a persistent cookie
+
+### Authenticate with Persistent Cookie [POST]
+
+    { "cookie": "jhg87uyr76fd5" }
+    
+### Success ###
+
+Return a 200 response
+
+    {"token": "sdf7d6f8s"}
+
+### Failures ###
+
+Return a 401
+
++ Request (application/json)
+
+        { "cookie": "jhg87uyr76fd5" }
+     
+   
++ Response 200 (application/json)
+
+        {"token": "sdf7d6f8s"}
+
++ Response 401
+
+## Request Pin Reset Email [/auth/pin/email/]
+
+    Requests that openAM send a pin reset email.
+
+### Request Pin Reset Email [POST]
+
+        { "barcode": "27131876457", "subject":"TPL Pin Reset", "body":"Click the folling link to reset your TPL pin." }
+
+### Success ###
+
+Return a 204 (No Content) response
+
+### Failures ###
+
+Return a 401
++ Request (application/json)
+
+        { "barcode": "27131876457", "subject":"TPL Pin Reset", "body":"Click the folling link to reset your TPL pin." }
+        
++ Response 204
++ Response 401
+
+## Confirm pin reset email [/auth/pin/confirm/]
+
+    Confirm that an incoming connection from a pin reset email is valid
+
+### Request Pin Reset Email [POST]
+
+        { "barcode": "27131876457", "token":"d8fysid", "confirmation":"ds8f76sd87ddd"  }
+
+### Success ###
+
+Return a 204 (No Content) response
+
+### Failures ###
+
+Return a 401
++ Request (application/json)
+
+        { "barcode": "27131876457", "token":"d8fysid", "confirmation":"ds8f76sd87ddd"  }
+        
++ Response 204
++ Response 401
+
+## Reset Pin [/auth/pin/reset/]
+
+    Reset pin with valid tokens from email.
+
+### Request Pin Reset Email [POST]
+
+        { "barcode": "27131876457", "pin":"1234", "token":"d8fysid", "confirmation":"ds8f76sd87ddd"  }
+
+### Success ###
+
+Return a 204 (No Content) response
+
+### Failures ###
+
+Return a 401
++ Request (application/json)
+
+        { "barcode": "27131876457", "pin":"1234", "token":"d8fysid", "confirmation":"ds8f76sd87ddd"  }
+        
++ Response 204
++ Response 401
+
+# Group Data Objects
+
+These do not currently have endpoints, but could in the future. For the moment, they serve as a reference for attributes contained within other resources.
+
+## ChargeInfo
+
+- **chargeCode** *required*: Unique code of the type of charge. Initially this will be taken from Symphony's list of charge codes.
+- **description** *required*: Human readable description of why the charge was incurred.
+- **amount** *required*: Dollar value of charge.
+
+        "chargeInfo": {
+            "chargeCode":"OVERDUE",
+            "description":"Item overdue",
+            "amount":"3.50"
+        }  
+
+## Error
+
+In addition to the appropriate HTTP status, an error may return an additional JSON structure with further details. Errors represent a failure to complete the desired operation and may include expected system refusal to complete the operation based on business rules (a checkout cannot be renewed because it has already had 2 renewals) or an unexpected system failure.
+
+- **description** *required*: 
+- **errorCode** *optional*: Any additional relevant error code beyond the HTTP status code. This code is purely optional. If the error is a result of an error from Symphony or another subsystem, the error code from that system may be used.
+
+
+        "error": {
+            "description":"User not found",
+            "errorCode":"USERNOTFOUND"
+        }
+        
+## Format
+
+- **type** *required*
+
+
+        "format": {
+            "type":"Large Print Book",
+        }  
+
+## Holding
+
+A single copy of an **Item** available for borrowing. This contains any required data that is specific to the system managing the holdings (e.g. Symphony). System is the only required field. Other fields are dependant on the system's fields.
+
+- **system** *required*: source system of the item such as Symphony, Overdrive.
+- **available** *optional*: boolean. Whether this holding is available for a hold placement
+
+### Symphony Holding attributes
+
+- **barcode** *required*: item barcode
+- **callNumber** *required*: item call number
+- **format** *required*: **Format** object. This format may differ from the format of the Item in some cases (e.g. Best Bet)
+- **itemLibrary** *required*: Location object to indicate owning library
+- **status** *optional*: Symphony status text field indicating current status of the item, such as IN_TRANSIT, IN_LIBRARY, etc. This is the currentLocation field in Symphony.
+
+
+        // Symphony-style holding (physical item)
+        "holding": {
+            "barcode":"456789",
+            "callNumber":"FICTION WOL",
+            "format": {},
+            "system":"Symphony",
+            "itemLibrary":{},
+            "available":false,
+            "status":"IN_TRANSIT"
+        }
+
+
+## Item
+
+- **id** *required*: globally unique ID of the item across all systems
+- **url** *required*: public URL for this item
+- **title** *required*: the title of the item
+- **author** *optional*: included if the item has an available author
+- **circulatingCopies** *required*: total number of circulating copies of the item
+- **format** *required*: **Format** object
+- **isbn** *optional*: an array containing all the known ISBN numbers associated with the item
+- **upc** *optional*: an array containing all the known UPC numbers associated with the item
+
+        "item": {
+            "id":"123456789",
+            "url":"http://torontopubliclibrary.com/items/?id=12345"
+            "title":"Sense and Sensibility",
+            "author":"Jane Austen",
+            "format": {},
+            "isbn": ["0230704220","9780230704220"],
+            "upc": ["883929192977"]
+        }  
+
+## Location        
+
+- **id** *required*: unique ID of location (typically branch code)
+- **description** *required*: human-readable version of the location (typically branch name)
+
+
+        "location": {
+            "id":"CED",
+            "description":"Cedarbrae"
+        }  
+

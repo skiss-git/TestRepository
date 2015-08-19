@@ -1,0 +1,173 @@
+//
+// Item meta styles
+// --------------------------------------
+.meta {
+  @include breakpoint(max-width $bp-desktop) {
+    //min-height: 6.5em;
+    position: relative;
+    @include clearfix;
+
+    &.is-editable {
+      //padding-top: 2em;
+    }
+
+    .pending-hold & {
+      min-height: 6.5em;
+    }
+  }
+
+  .checkout-message {
+    bottom: 16px;
+    position: absolute;
+    right: 16px;
+    text-align: right;
+
+    @include breakpoint(max-width $bp-desktop) {
+      bottom: auto;
+      max-width: 50%;
+      right: 0;
+      top: 0;
+    }
+
+    p {
+      display: inline-block;
+      margin-bottom: .33em;
+
+      &.failure-message,
+      &.success-message {
+        padding-left: 26px;
+        padding-right: 0;
+      }
+
+      &.success-message {
+        color: palette(secondary);
+      }
+
+      &.failure-message,
+      &.failure-reason {
+        color: palette(danger);
+      }
+
+      &.failure-reason {
+        @include font-size(xs);
+        margin: 0;
+      }
+    }
+  }
+
+  .renewals-used {
+    bottom: 1em;
+    left: 1em;
+    margin: 0;
+    padding: .5em .75em;
+    position: absolute;
+    right: 1em;
+    text-align: right;
+
+    @include breakpoint(max-width $bp-desktop) {
+      bottom: auto;
+      left: auto;
+      max-width: 50%;
+      right: 0;
+      text-align: center;
+      top: 0;
+    }
+
+    .renewals-overdue {
+      @include font-size(xs);
+    }
+  }
+}
+
+// Meta components
+// --------------------------------------
+.meta-list,
+.meta-alert {
+  @include breakpoint(max-width $bp-desktop) {
+    float: left;
+    width: 65%;
+  }
+}
+
+.meta-alert {
+  @include breakpoint($bp-desktop) {
+    bottom: 1em;
+    left: 1em;
+    position: absolute;
+    right: 1em;
+  }
+}
+
+.meta-action,
+%meta-action {
+  @include breakpoint($bp-desktop) {
+    bottom: 1em;
+    position: absolute;
+    right: 1em;
+  }
+}
+
+.meta-collapse {
+  @include breakpoint(max-width $bp-desktop) {
+    width: 65%;
+  }
+}
+
+// Meta buttons
+// --------------------------------------
+.meta-expand,
+.meta-status,
+.meta-cancel {
+  @include breakpoint(max-width $bp-desktop) {
+    position: absolute;
+  }
+}
+
+.meta-expand {
+  line-height: 1;
+
+  @include breakpoint(max-width $bp-desktop) {
+    left: 0;
+    top: 0;
+  }
+}
+
+.meta-status {
+  @include breakpoint(max-width $bp-desktop) {
+    right: 0;
+    top: 0;
+  }
+}
+
+.meta-cancel {
+  @extend %meta-action;
+
+  @include breakpoint(max-width $bp-desktop) {
+    bottom: 0;
+    right: 0;
+  }
+
+  @include breakpoint($bp-desktop) {
+    // TODO: find a way to use em instead of px
+    bottom: 16px;
+    display: block;
+    right: 16px;
+    text-decoration: underline;
+    @include font-size(sm);
+  }
+}
+
+
+// Alerts
+// --------------------------------------
+.meta {
+  .failure-message,
+  .success-message {
+    padding-left: 32px;
+    padding-right: 0;
+  }
+
+  .alert-message {
+    @include font-size(sm);
+  }
+}

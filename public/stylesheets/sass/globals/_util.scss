@@ -1,0 +1,66 @@
+.hidden {
+  display: none !important;
+}
+
+.hidden-mobile {
+  @include breakpoint(max-width $bp-desktop) {
+    display: none !important;
+  }
+}
+
+.hidden-tablet {
+  @include breakpoint($bp-tablet $bp-desktop) {
+    display: none !important;
+  }
+}
+
+.hidden-desktop {
+  @include breakpoint($bp-desktop) {
+    display: none !important;
+  }
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+
+.float-right {
+  float: right !important;
+}
+
+.float-left {
+  float: left !important;
+}
+
+
+
+// Bootstrap affix
+// --------------------------------------
+.affix {
+  position: fixed;
+  @include translate3d(0, 0, 0);
+}
+
+.affix-bottom {
+  position: absolute;
+}
+
+
+// Bootstrap transitions
+// --------------------------------------
+.fade {
+  opacity: 0;
+  @include transition(opacity .15s linear);
+
+  &.in {
+    opacity: 1;
+  }
+}

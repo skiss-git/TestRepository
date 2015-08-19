@@ -1,0 +1,136 @@
+//
+// Item styles
+// --------------------------------------
+.item {
+  position: relative;
+
+  @include breakpoint(max-width $bp-desktop) {
+    padding-left: 7em;
+    @include clearfix;
+
+    .checkbox {
+      .checkbox-display {
+        pointer-events: none;
+
+        &:before {
+          content: normal;
+        }
+      }
+    }
+  }
+
+  @include breakpoint($bp-desktop) {
+    padding-left: 9em;
+
+    &.is-editable {
+      padding-left: 11.5em;
+    }
+  }
+}
+
+%item-title,
+.item-title {
+  font-family: $font-serif;
+  font-weight: 400;
+  margin-bottom: .75em;
+  margin-top: 0;
+  @include font-size-rem(1.6);
+
+  @include breakpoint($bp-desktop) {
+    @include font-size(h3);
+  }
+}
+
+%item-image,
+.item-image {
+  float: left;
+
+  @include breakpoint(max-width $bp-desktop) {
+    margin-left: -7em;
+    width: 6em;
+  }
+
+  @include breakpoint($bp-desktop) {
+    margin-left: -9em;
+    width: 8em;
+  }
+}
+
+.item-author {
+  font-weight: 600;
+  margin-bottom: .1em;
+
+  @include breakpoint($bp-desktop) {
+    margin-bottom: .25em;
+  }
+}
+
+.item-body {
+  @include breakpoint(max-width $bp-desktop) {
+    @include font-size-rem(1.2);
+  }
+}
+
+.item-type {
+  margin-bottom: 1em;
+}
+
+.item-barcode {
+  margin-bottom: .25em;
+
+  @include breakpoint(max-width $bp-desktop) {
+    @include font-size-rem(1.3);
+  }
+}
+
+.meta {
+  @include breakpoint(max-width $bp-desktop) {
+    @include font-size-rem(1.3);
+  }
+}
+
+.meta-list {
+  @include breakpoint(max-width $bp-desktop) {
+    > li {
+      margin-bottom: .25em;
+    }
+  }
+}
+
+
+//
+// Charge item
+// --------------------------------------
+.charge-item {
+  padding-left: 5em;
+
+  .item-image {
+    margin-left: -5em;
+    width: 4em;
+  }
+
+  .item-title {
+    @include font-size(h5);
+  }
+}
+
+
+
+
+/* &.is-editable {
+  padding-left: 7.75em;
+  pointer-events: auto;
+
+  .checkbox {
+    .checkbox-display {
+      &:before {
+        content: '';
+      }
+    }
+  }
+
+  .item-image {
+    margin-left: -5.5em;
+    width: 4.5em;
+  }
+} */

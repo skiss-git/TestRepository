@@ -1,0 +1,1341 @@
+branches:
+  AG:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB02&R=LIB02
+    address: 155 Bonis Ave.
+    phone: 416-396-8943
+    hours:
+      - 'Mon: 9:00 AM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-8:30 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: 1:30 PM-5:00 PM'
+    name: Agincourt
+  ACD:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB03&R=LIB03
+    address: 496 Birchmount Road
+    phone: 416-396-8890
+    hours:
+      - 'Mon: 12:30 PM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-8:30 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: 1:30 PM-5:00 PM'
+    name: Albert Campbell
+  AB:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB04&R=LIB04
+    address: 1515 Albion Road
+    phone: 416-394-5170
+    hours:
+      - 'Mon: 9:00 AM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: 1:30 PM-5:00 PM'
+    name: Albion
+  AD:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB020&R=LIB020
+    address: 2 Orianna Drive
+    phone: 416-394-5310
+    hours:
+      - 'Mon: 10:00 AM-8:30 PM'
+      - 'Tue: 10:00 AM-6:00 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Alderwood
+  AP:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB021&R=LIB021
+    address: 1565 Lawrence Ave. W.
+    phone: 416-395-5420
+    hours:
+      - 'Mon: Closed'
+      - 'Tue: 12:30 PM-8:30 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Amesbury Park
+  AN:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB022&R=LIB022
+    address: 145 Annette Street
+    phone: 416-393-7692
+    hours:
+      - 'Mon: 10:00 AM-8:30 PM'
+      - 'Tue: 12:30 PM-8:30 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Annette Street
+  AH:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB023&R=LIB023
+    address: 2140 Avenue Road
+    phone: 416-395-5430
+    hours:
+      - 'Mon: Closed'
+      - 'Tue: 10:00 AM-6:00 PM'
+      - 'Wed: 12:30 PM-8:30 PM'
+      - 'Thu: 10:00 AM-6:00 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Armour Heights
+  BF:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB05&R=LIB05
+    address: 20 Covington Road
+    phone: 416-395-5440
+    hours:
+      - 'Mon: 12:30 PM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: 1:30 PM-5:00 PM'
+    name: Barbara Frum
+  BY:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB024&R=LIB024
+    address: 123A-2901 Bayview Ave.
+    phone: 416-395-5460
+    hours:
+      - 'Mon: 10:00 AM-8:30 PM'
+      - 'Tue: 12:30 PM-8:30 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: 1:30 PM-5:00 PM'
+    name: Bayview
+  BE:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB025&R=LIB025
+    address: 2161 Queen Street East
+    phone: 416-393-7703
+    hours:
+      - 'Mon: 9:00 AM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-5:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Beaches
+  BD:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB026&R=LIB026
+    address: 1515 Danforth Road
+    phone: 416-396-8910
+    hours:
+      - 'Mon: Closed'
+      - 'Tue: 12:30 PM-8:30 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Bendale
+  BC:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB027&R=LIB027
+    address: 1700 Wilson Ave.
+    phone: 416-395-5470
+    hours:
+      - 'Mon: Closed'
+      - 'Tue: 12:30 PM-8:30 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Black Creek
+  BL:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB06&R=LIB06
+    address: 1101 Bloor Street West
+    phone: 416-393-7674
+    hours:
+      - 'Mon: 9:00 AM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-8:30 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: 1:30 PM-5:00 PM'
+    name: Bloor/Gladstone
+  BR:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB07&R=LIB07
+    address: 36 Brentwood Road North
+    phone: 416-394-5240
+    hours:
+      - 'Mon: 9:00 AM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: 1:30 PM-5:00 PM'
+    name: Brentwood
+  BRW:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB028&R=LIB028
+    address: 157A-2900 Warden Ave.
+    phone: 416-396-8960
+    hours:
+      - 'Mon: 9:00 AM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-8:30 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Bridlewood
+  BB:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB029&R=LIB029
+    address: 210 Brookbanks Dr.
+    phone: 416-395-5480
+    hours:
+      - 'Mon: Closed'
+      - 'Tue: 12:30 PM-8:30 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Brookbanks
+  BUR:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB030&R=LIB030
+    address: 1081 Progress Ave.
+    phone: 416-396-8740
+    hours:
+      - 'Mon: Closed'
+      - 'Tue: 12:30 PM-8:30 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Burrows Hall
+  CED:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB08&R=LIB08
+    address: 545 Markham Road
+    phone: 416-396-8850
+    hours:
+      - 'Mon: 9:00 AM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-8:30 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: 1:30 PM-5:00 PM'
+    name: Cedarbrae
+  CE:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB031&R=LIB031
+    address: 578 Finch Ave. West
+    phone: 416-395-5490
+    hours:
+      - 'Mon: 10:00 AM-8:30 PM'
+      - 'Tue: 12:30 PM-8:30 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Centennial
+  CH:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB032&R=LIB032
+    address: 100 Queen Street West
+    phone: 416-393-7650
+    hours:
+      - 'Mon: 10:00 AM-6:00 PM'
+      - 'Tue: 10:00 AM-6:00 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 10:00 AM-6:00 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: Closed'
+      - 'Sun: Closed'
+    name: City Hall
+  CC:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB033&R=LIB033
+    address: 3017 Kingston Road
+    phone: 416-396-8916
+    hours:
+      - 'Mon: Closed'
+      - 'Tue: 12:30 PM-8:30 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Cliffcrest
+  CS:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB034&R=LIB034
+    address: 766 College Street
+    phone: 416-393-7668
+    hours:
+      - 'Mon: 10:00 AM-8:30 PM'
+      - 'Tue: 12:30 PM-8:30 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: College/Shaw
+  DA:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB035&R=LIB035
+    address: 1675 Danforth Ave.
+    phone: 416-393-7783
+    hours:
+      - 'Mon: 9:00 AM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-5:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Danforth/Coxwell
+  DT:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB036&R=LIB036
+    address: 1246 Shaw Street
+    phone: 416-393-7732
+    hours:
+      - 'Mon: Closed'
+      - 'Tue: 12:30 PM-8:30 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Davenport
+  DR:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB037&R=LIB037
+    address: 416 Dawes Road
+    phone: 416-396-3820
+    hours:
+      - 'Mon: 10:00 AM-8:30 PM'
+      - 'Tue: 12:30 PM-8:30 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Dawes Road
+  DP:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB038&R=LIB038
+    address: 40 St. Clair Ave. E.
+    phone: 416-393-7657
+    hours:
+      - 'Mon: 9:00 AM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-5:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Deer Park
+  DM:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB09&R=LIB09
+    address: 888 Lawrence Ave. East
+    phone: 416-395-5710
+    hours:
+      - 'Mon: 12:30 PM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: 1:30 PM-5:00 PM'
+    name: Don Mills
+  DO:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB039&R=LIB039
+    address: 2793 Keele Street
+    phone: 416-395-5720
+    hours:
+      - 'Mon: 12:30 PM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-5:30 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: 1:30 PM-5:00 PM'
+    name: Downsview
+  DU:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB040&R=LIB040
+    address: 1625 Dufferin Street
+    phone: 416-393-7712
+    hours:
+      - 'Mon: 10:00 AM-8:30 PM'
+      - 'Tue: 12:30 PM-8:30 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Dufferin/St. Clair
+  EA:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB041&R=LIB041
+    address: 430 Burnhamthorpe Road
+    phone: 416-394-5270
+    hours:
+      - 'Mon: 9:00 AM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-5:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: 1:30 PM-5:00 PM'
+    name: Eatonville
+  ES:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB042&R=LIB042
+    address: 1 Eglinton Square, Unit 126
+    phone: 416-396-8920
+    hours:
+      - 'Mon: 9:00 AM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 9:00 AM-5:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Eglinton Square
+  EB:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB043&R=LIB043
+    address: 2 Elmbrook Cres.
+    phone: 416-394-5290
+    hours:
+      - 'Mon: Closed'
+      - 'Tue: 10:00 AM-6:00 PM'
+      - 'Wed: 12:30 PM-8:30 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Elmbrook Park
+  EG:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB044&R=LIB044
+    address: 120 Trowell Ave.
+    phone: 416-394-1006
+    hours:
+      - 'Mon: 10:00 AM-8:30 PM'
+      - 'Tue: 12:30 PM-8:30 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Evelyn Gregory
+  FV:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB010&R=LIB010
+    address: 35 Fairview Mall Dr.
+    phone: 416-395-5750
+    hours:
+      - 'Mon: 9:00 AM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-5:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: 1:30 AM-5:00 PM'
+    name: Fairview
+  FP:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB045&R=LIB045
+    address: 29 St. Dennis Dr.
+    phone: 416-395-5820
+    hours:
+      - 'Mon: Closed'
+      - 'Tue: 12:30 PM-8:30 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: 1:30 PM-5:00 PM'
+    name: Flemingdon Park
+  FH:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB046&R=LIB046
+    address: 700 Eglinton Ave. West
+    phone: 416-393-7706
+    hours:
+      - 'Mon: 9:00 AM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-5:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Forest Hill
+  FO:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB140&R=LIB140
+    address: 190 Fort York Blvd.
+    phone: 416-393-6240
+    hours:
+      - 'Mon: 9:00 AM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-5:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Fork York
+  GE:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB047&R=LIB047
+    address: 1432 Gerrard Street East
+    phone: 416-393-7717
+    hours:
+      - 'Mon: 10:00 AM-8:30 PM'
+      - 'Tue: 12:30 PM-8:30 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Gerrard/Ashdale
+  GHP:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB048&R=LIB048
+    address: 295 Alton Towers Circle
+    phone: 416-396-8964
+    hours:
+      - 'Mon: 9:00 AM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-5:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: 1:30 PM-5:00 PM'
+    name: Goldhawk Park
+  GW:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB139&R=LIB139
+    address: 123 Guildwood Parkway
+    phone: 416-396-8872
+    hours:
+      - 'Mon: Closed'
+      - 'Tue: 12:30 PM-8:30 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Guildwood
+  HP:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB049&R=LIB049
+    address: 228 Roncesvalles Ave.
+    phone: 416-393-7671
+    hours:
+      - 'Mon: 9:00 AM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-5:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: High Park
+  HC:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB050&R=LIB050
+    address: 3550 Ellesmere Road
+    phone: 416-396-8876
+    hours:
+      - 'Mon: Closed'
+      - 'Tue: 12:30 PM-8:30 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Highland Creek
+  HIL:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB051&R=LIB051
+    address: 5801 Leslie Street
+    phone: 416-395-5830
+    hours:
+      - 'Mon: 9:00 AM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-8:30 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Hillcrest
+  HB:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB052&R=LIB052
+    address: 200 Park Lawn Road
+    phone: 416-394-5300
+    hours:
+      - 'Mon: Closed'
+      - 'Tue: 10:00 AM-6:00 PM'
+      - 'Wed: 12:30 PM-8:30 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Humber Bay
+  HS:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB053&R=LIB053
+    address: 2990 Islington Ave.
+    phone: 416-395-5840
+    hours:
+      - 'Mon: Closed'
+      - 'Tue: 12:30 PM-8:30 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Humber Summit
+  HW:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB054&R=LIB054
+    address: 850 Humberwood Blvd.
+    phone: 416-394-5210
+    hours:
+      - 'Mon: Closed'
+      - 'Tue: 12:30 PM-8:30 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Humberwood
+  IT:
+    url: http://www.torontopubliclibrary.ca/
+    address: Martin Ross
+    phone: 000-000-0000
+    hours:
+      - 'Mon: Closed'
+      - 'Tue: Closed'
+      - 'Wed: Closed'
+      - 'Thu: Closed'
+      - 'Fri: Closed'
+      - 'Sat: Closed'
+      - 'Sun: Closed'
+    name: Martin Ross
+  JD:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB055&R=LIB055
+    address: 620 Jane Street
+    phone: 416-394-1014
+    hours:
+      - 'Mon: 12:30 PM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-5:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Jane/Dundas
+  JS:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB056&R=LIB056
+    address: 1906 Sheppard Ave West
+    phone: 416-395-5966
+    hours:
+      - 'Mon: 10:00 AM-8:30 PM'
+      - 'Tue: 12:30 PM-8:30 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Jane/Sheppard
+  JO:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB057&R=LIB057
+    address: 118 Jones Ave.
+    phone: 416-393-7715
+    hours:
+      - 'Mon: 10:00 AM-6:00 PM'
+      - 'Tue: 10:00 AM-8:30 PM'
+      - 'Wed: 12:30 PM-8:30 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Jones
+  KE:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB138&R=LIB138
+    address: 2380 Eglinton Ave. East
+    phone: 416-396-8924
+    hours:
+      - 'Mon: Closed'
+      - 'Tue: 12:30 PM-8:30 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Kennedy/Eglinton
+  LE:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB059&R=LIB059
+    address: 165 McRae Dr.
+    phone: 416-396-3835
+    hours:
+      - 'Mon: 9:00 AM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-5:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Leaside
+  LS:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB011&R=LIB011
+    address: 239 College Street
+    phone: 416-393-7746
+    hours:
+      - 'Mon: 9:00 AM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-8:30 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: 1:30 PM-5:00 PM'
+    name: Lillian H. Smith
+  LO:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB060&R=LIB060
+    address: 3083 Yonge Street
+    phone: 416-393-7730
+    hours:
+      - 'Mon: 9:00 AM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-5:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Locke
+  LB:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB061&R=LIB061
+    address: 3500 Lake Shore Blvd. West
+    phone: 416-394-5320
+    hours:
+      - 'Mon: Closed'
+      - 'Tue: 12:30 PM-8:30 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Long Branch
+  MA:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB062&R=LIB062
+    address: 137 Main Street
+    phone: 416-393-7700
+    hours:
+      - 'Mon: 9:00 AM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-5:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Main Street
+  MAL:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB012&R=LIB012
+    address: 30 Sewells Road
+    phone: 416-396-8969
+    hours:
+      - 'Mon: 9:00 AM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-8:30 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: 1:30 PM-5:00 PM'
+    name: Malvern
+  MAS:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB013&R=LIB013
+    address: 1745 Eglinton Avenue West
+    phone: 416-394-1000
+    hours:
+      - 'Mon: 9:00 AM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: 1:30 PM-5:00 PM'
+    name: Maria A. Shchuka
+  MRV:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB063&R=LIB063
+    address: 85 Ellesmere Road, Unit 16
+    phone: 416-396-8931
+    hours:
+      - 'Mon: 10:00 AM-8:30 PM'
+      - 'Tue: 12:30 PM-8:30 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Maryvale
+  MCG:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB064&R=LIB064
+    address: 2219 Lawrence Ave. East
+    phone: 416-396-8935
+    hours:
+      - 'Mon: Closed'
+      - 'Tue: 12:30 PM-8:30 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: 1:30 PM-5:00 PM'
+    name: McGregor Park
+  ME:
+    name: "Merril Collection of Science Fiction, Speculation & Fantasy"
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB137&R=LIB137
+    address: 239 College Street
+    phone: 416-393-7748
+    hours:
+      - 'Mon: 10:00 AM-6:00 PM'
+      - 'Tue: 10:00 AM-6:00 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 10:00 AM-6:00 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+  MI:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB065&R=LIB065
+    address: 47 Station Road
+    phone: 416-394-5330
+    hours:
+      - 'Mon: Closed'
+      - 'Tue: 12:30 PM-8:30 PM'
+      - 'Wed: 12:30 PM-8:30 PM'
+      - 'Thu: 10:00 AM-6:00 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Mimico Centennial
+  MS:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB066&R=LIB066
+    address: 4279 Lawrence Ave. East
+    phone: 416-396-8881
+    hours:
+      - 'Mon: 9:00 AM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 9:00 AM-5:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Morningside
+  MD:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB067&R=LIB067
+    address: 1123 Weston Road
+    phone: 416-394-1008
+    hours:
+      - 'Mon: 10:00 AM-8:30 PM'
+      - 'Tue: 12:30 PM-8:30 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Mount Dennis
+  MP:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB068&R=LIB068
+    address: 599 Mt. Pleasant Road
+    phone: 416-393-7737
+    hours:
+      - 'Mon: Closed'
+      - 'Tue: 12:30 PM-8:30 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Mount Pleasant
+  NT:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB069&R=LIB069
+    address: 110 Eleventh Street
+    phone: 416-394-5350
+    hours:
+      - 'Mon: Closed'
+      - 'Tue: 10:00 AM-6:00 PM'
+      - 'Wed: 12:30 PM-8:30 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: 1:30 PM-5:00 PM'
+    name: New Toronto
+  CL:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB01&R=LIB01
+    address: 5120 Yonge Street
+    phone: 416-395-5535
+    hours:
+      - 'Mon: 9:00 AM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-8:30 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: 1:30 PM-5:00 PM'
+    name: North York Central Library
+  ND:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB014&R=LIB014
+    address: 40 Orchard View Blvd.
+    phone: 416-393-7610
+    hours:
+      - 'Mon: 9:00 AM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-8:30 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: 1:30 PM-5:00 PM'
+    name: Northern District
+  NE:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB070&R=LIB070
+    address: 123B Rexdale Blvd., Unit 5
+    phone: 416-394-5230
+    hours:
+      - 'Mon: Closed'
+      - 'Tue: 12:30 PM-8:30 PM'
+      - 'Wed: 12:30 PM-8:30 PM'
+      - 'Thu: 10:00 AM-6:00 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Northern Elms
+  OV:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB071&R=LIB071
+    address: 341 Oakwood Ave.
+    phone: 416-394-1040
+    hours:
+      - 'Mon: 10:00 AM-8:30 PM'
+      - 'Tue: 12:30 PM-8:30 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Oakwood Village Library and Arts Centre
+  OS:
+    name: "Osborne Collection of Early Children's Books"
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB136&R=LIB136
+    address: 239 College Street
+    phone: 416-393-7753
+    hours:
+      - 'Mon: 10:00 AM-6:00 PM'
+      - 'Tue: 10:00 AM-6:00 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 10:00 AM-6:00 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+  PM:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB072&R=LIB072
+    address: 560 Palmerston Ave.
+    phone: 416-393-7680
+    hours:
+      - 'Mon: 10:00 AM-8:30 PM'
+      - 'Tue: 12:30 PM-8:30 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Palmerston
+  PA:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB015&R=LIB015
+    address: 701 Pape Ave.
+    phone: 416-393-7727
+    hours:
+      - 'Mon: 9:00 AM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-8:30 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: 1:30 PM-5:00 PM'
+    name: Pape/Danforth
+  PK:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB073&R=LIB073
+    address: 1303 Queen Street West
+    phone: 416-393-7686
+    hours:
+      - 'Mon: 9:00 AM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-8:30 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: 1:30 PM-5:00 PM'
+    name: Parkdale
+  PL:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB074&R=LIB074
+    address: 269 Gerrard Street East
+    phone: 416-393-7663
+    hours:
+      - 'Mon: 9:00 AM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-8:30 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: 1:30 PM-5:00 PM'
+    name: Parliament Street
+  PE:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB075&R=LIB075
+    address: 1589 Dupont Street
+    phone: 416-393-7677
+    hours:
+      - 'Mon: Closed'
+      - 'Tue: 12:30 PM-8:30 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Perth/Dupont
+  PV:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB076&R=LIB076
+    address: 575 Van Horne Ave.
+    phone: 416-395-5940
+    hours:
+      - 'Mon: 9:00 AM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-8:30 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Pleasant View
+  PU:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB077&R=LIB077
+    address: 5450 Lawrence Ave. East
+    phone: 416-396-8885
+    hours:
+      - 'Mon: 10:00 AM-8:30 PM'
+      - 'Tue: 12:30 PM-8:30 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Port Union
+  QS:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB078&R=LIB078
+    address: 765 Queen Street East
+    phone: 416-393-7723
+    hours:
+      - 'Mon: Closed'
+      - 'Tue: 12:30 PM-8:30 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Queen/Saulter
+  RX:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB079&R=LIB079
+    address: 2243 Kipling Avenue
+    phone: 416-394-5200
+    hours:
+      - 'Mon: Closed'
+      - 'Tue: 10:00 AM-6:00 PM'
+      - 'Wed: 12:30 PM-8:30 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Rexdale
+  RI:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB016&R=LIB016
+    address: 1806 Islington Ave.
+    phone: 416-394-5120
+    hours:
+      - 'Mon: 9:00 AM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-8:30 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: 1:30 PM-5:00 PM'
+    name: Richview
+  RD:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB080&R=LIB080
+    address: 370 Broadview Ave.
+    phone: 416-393-7720
+    hours:
+      - 'Mon: 9:00 AM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-5:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Riverdale
+  RN:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB081&R=LIB081
+    address: 2178 Bloor Street West
+    phone: 416-393-7697
+    hours:
+      - 'Mon: 9:00 AM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-5:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Runnymede
+  SWS:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB017&R=LIB017
+    address: 170 Memorial Park Ave.
+    phone: 416-396-3975
+    hours:
+      - 'Mon: 9:00 AM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-8:30 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: 1:30 PM-5:00 PM'
+    name: S. Walter Stewart
+  SA:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB085&R=LIB085
+    address: 327 Bathurst Street
+    phone: 416-393-7653
+    hours:
+      - 'Mon: 9:00 AM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-5:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Sanderson
+  SC:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB144&R=LIB144
+    address: 156 Borough Drive
+    phone: 416-396-3599
+    hours:
+      - 'Mon: 9:00 AM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-5:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Scarborough Civic Centre
+  SP:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB086&R=LIB086
+    address: 10 Spadina Road
+    phone: 416-393-7666
+    hours:
+      - 'Mon: Closed'
+      - 'Tue: 12:30 PM-8:30 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Spadina Road
+  SI:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB082&R=LIB082
+    address: 1748 St. Clair Ave. West
+    phone: 416-393-7709
+    hours:
+      - 'Mon: Closed'
+      - 'Tue: 12:30 PM-8:30 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: St. Clair/Silverthorn
+  SJ:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB083&R=LIB083
+    address: 495 Sherbourne Street
+    phone: 416-393-7744
+    hours:
+      - 'Mon: Closed'
+      - 'Tue: 12:30 PM-8:30 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: St. James Town
+  SL:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB084&R=LIB084
+    address: 171 Front Street East
+    phone: 416-393-7655
+    hours:
+      - 'Mon: 10:00 AM-8:30 PM'
+      - 'Tue: 12:30 PM-8:30 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: St. Lawrence
+  ST:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB087&R=LIB087
+    address: C107-375 Bamburgh Circle
+    phone: 416-396-8975
+    hours:
+      - 'Mon: 9:00 AM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-8:30 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Steeles
+  SW:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB088&R=LIB088
+    address: 95 Lavinia Ave.
+    phone: 416-393-7695
+    hours:
+      - 'Mon: Closed'
+      - 'Tue: 10:00 AM-6:00 PM'
+      - 'Wed: 1:00 PM-8:00 PM'
+      - 'Thu: 10:00 AM-6:00 PM'
+      - 'Fri: Closed'
+      - 'Sat: 10:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Swansea Memorial
+    notes: "Closed Tuesday and Thursday from 12:00pm to 1:00pm"
+  TA:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB089&R=LIB089
+    address: 1440 Kingston Road
+    phone: 416-396-8939
+    hours:
+      - 'Mon: Closed'
+      - 'Tue: 12:30 PM-8:30 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Taylor Memorial
+  TH:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB090&R=LIB090
+    address: 48 Thorncliffe Park Dr.
+    phone: 416-396-3865
+    hours:
+      - 'Mon: 9:00 AM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-8:30 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Thorncliffe
+  TOD:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB091&R=LIB091
+    address: 1081 1/2 Pape Ave (at Torrens)
+    phone: 416-396-3875
+    hours:
+      - 'Mon: Closed'
+      - 'Tue: 12:30 PM-8:30 PM'
+      - 'Wed: 9:00 AM-5:00 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: Closed'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Todmorden Room
+  TRL:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB018&R=LIB018
+    address: 789 Yonge Street
+    phone: 416-395-5577
+    hours:
+      - 'Mon: 9:30 AM-8:30 PM'
+      - 'Tue: 9:30 AM-8:30 PM'
+      - 'Wed: 9:30 AM-8:30 PM'
+      - 'Thu: 9:30 AM-8:30 PM'
+      - 'Fri: 9:30 AM-5:30 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: 1:30 PM-5:00 PM'
+    name: Toronto Reference Library
+  VV:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB092&R=LIB092
+    address: 184 Sloane Ave.
+    phone: 416-395-5950
+    hours:
+      - 'Mon: Closed'
+      - 'Tue: 12:30 PM-8:30 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Victoria Village
+  WE:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB093&R=LIB093
+    address: 2 King Street
+    phone: 416-394-1016
+    hours:
+      - 'Mon: 10:00 AM-8:30 PM'
+      - 'Tue: 12:30 PM-8:30 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Weston
+  WS:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB094&R=LIB094
+    address: 1571 Sandhurst Circle
+    phone: 416-396-8979
+    hours:
+      - 'Mon: 9:00 AM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-5:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Woodside Square
+  WP:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB095&R=LIB095
+    address: 16 Bradstock Road
+    phone: 416-395-5960
+    hours:
+      - 'Mon: Closed'
+      - 'Tue: 10:00 AM-6:00 PM'
+      - 'Wed: 10:00 AM-6:00 PM'
+      - 'Thu: 12:30 PM-8:30 PM'
+      - 'Fri: 10:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Woodview Park
+  WY:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB096&R=LIB096
+    address: 1431 Bathurst Street
+    phone: 416-393-7683
+    hours:
+      - 'Mon: 9:00 AM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-5:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Wychwood
+  YW:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB019&R=LIB019
+    address: 1785 Finch Ave. West
+    phone: 416-395-5980
+    hours:
+      - 'Mon: 12:30 PM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-6:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: 1:30 PM-5:00 PM'
+    name: York Woods
+  YO:
+    url: http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMLIB097&R=LIB097
+    address: 22 Yorkville Ave.
+    phone: 416-393-7660
+    hours:
+      - 'Mon: 9:00 AM-8:30 PM'
+      - 'Tue: 9:00 AM-8:30 PM'
+      - 'Wed: 9:00 AM-8:30 PM'
+      - 'Thu: 9:00 AM-8:30 PM'
+      - 'Fri: 9:00 AM-5:00 PM'
+      - 'Sat: 9:00 AM-5:00 PM'
+      - 'Sun: Closed'
+    name: Yorkville

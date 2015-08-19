@@ -1,0 +1,93 @@
+$panel-status-height:       45px;
+
+//
+// Panel styles
+// --------------------------------------
+.panels {
+  @extend %list-unstyled;
+  margin-bottom: 0;
+  @include clearfix;
+
+  @include breakpoint(max-width $bp-desktop) {
+    margin-left: .75em;
+    margin-right: .75em;
+    margin-top: .75em;
+  }
+
+  > li {
+    margin-bottom: 1em;
+    @include full;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // when preceded by alerts
+  .alert + & {
+    margin-top: 1em;
+  }
+}
+
+.panel {
+  border: 1px solid palette(base);
+  background-color: palette(base, lighter);
+
+  @include breakpoint(max-width $bp-desktop) {
+    position: relative;
+
+    &.has-status,
+    &.has-position,
+    &.has-countdown {
+      padding-top: $panel-status-height;
+    }
+  }
+}
+
+.panel-content {
+  @include breakpoint($bp-desktop) {
+    width: 100%;
+
+    & + & {
+      border-top: 1px solid palette(base);
+    }
+  }
+}
+
+.panel-content,
+.panel-meta {
+  padding: 1em;
+}
+
+.panel-meta {
+  @include breakpoint(max-width $bp-desktop) {
+    border-top: 1px solid palette(base);
+  }
+
+  @include breakpoint($bp-desktop) {
+    position: relative;
+
+    .panel-content + & {
+      border-left: 1px solid palette(base);
+    }
+  }
+}
+
+.panel-status {
+  @include breakpoint(max-width $bp-desktop) {
+    height: $panel-status-height;
+    left: 0;
+    padding: 1em 1em 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  @include breakpoint($bp-desktop) {
+    margin-bottom: 1em;
+
+    &.no-status {
+      margin-bottom: 0;
+    }
+  }
+}

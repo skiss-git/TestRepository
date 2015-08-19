@@ -1,0 +1,102 @@
+//
+// Settings structure
+// --------------------------------------
+.settings {
+  @extend %list-unstyled;
+  margin-bottom: 0;
+
+  > li {
+    margin-bottom: 1em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+//
+// Setting structure
+// --------------------------------------
+.setting {
+  @include clearfix;
+}
+
+.setting-label,
+.setting-value {
+  @include breakpoint($bp-desktop) {
+    float: left;
+  }
+}
+
+.setting-label {
+
+  @include breakpoint(max-width $bp-desktop) {
+    margin-bottom: .1em;
+  }
+
+  @include breakpoint($bp-desktop) {
+    width: 30%;
+  }
+}
+
+.setting-value {
+  font-weight: 600;
+
+  a {
+    font-weight: 400;
+  }
+
+  @include breakpoint($bp-desktop) {
+    width: 70%;
+  }
+}
+
+.setting-edit {
+  margin-left: 2em;
+}
+
+
+//
+// Settings components
+// -----------------------------------------------------------------------------
+
+
+// Home branch
+// --------------------------------------
+.branch-settings {
+  .branch-name {
+    margin-bottom: .1em;
+    margin-top: 0;
+    @include font-size(md);
+  }
+
+  .branch-address {
+    margin-bottom: 0;
+  }
+}
+
+// Notifications
+// --------------------------------------
+.notification-settings {
+  .notification-type {
+    margin-bottom: .5em;
+  }
+
+  .icon-checked,
+  .icon-unchecked {
+    background-position: left center;
+    background-repeat: no-repeat;
+  }
+
+  .icon-checked {
+    background-size: 28px 22px;
+    padding-left: 36px;
+    @include background-image(image-url('icon/checked.svg'));
+  }
+
+  .icon-unchecked {
+    background-size: 24px 22px;
+    padding-left: 32px;
+    @include background-image(image-url('icon/unchecked.svg'));
+  }
+}

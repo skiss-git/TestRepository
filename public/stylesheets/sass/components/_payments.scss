@@ -1,0 +1,20 @@
+//
+// Payments
+// --------------------------------------
+
+
+// Summary menu payment
+// --------------------------------------
+.summary-menu {
+  .payment-btn {
+    margin-bottom: .5em;
+    margin-right: .5em;
+    vertical-align: top;
+  }
+
+  .payment-fee {
+    color: palette(base, dark);
+    margin-left: .5em;
+    vertical-align: top;
+  }
+}

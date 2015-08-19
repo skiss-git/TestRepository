@@ -1,0 +1,90 @@
+//
+// Alert group styles
+// --------------------------------------
+.alerts {
+  clear: both;
+  margin-bottom: 1.5em;
+}
+
+// Alert single styles
+// --------------------------------------
+.alert {
+  background-color: palette(primary, opaque);
+  border: 1px solid palette(primary, light);
+  padding: 1em;
+  position: relative;
+
+  .close {
+    float: right;
+    margin-bottom: .5em;
+    margin-top: 0;
+  }
+
+  // inside of panels
+  .panels & {
+    margin-bottom: -1px; // remove double border
+    z-index: 10;
+  }
+}
+
+// Alert components
+// --------------------------------------
+.alert-title {
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 0;
+
+  + .alert-message {
+    margin-top: .25em;
+  }
+}
+
+.alert-message {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+//
+// Alert types
+// --------------------------------------
+.alert-success {
+  // if both alerts exist
+  + .alert-failure {
+    margin-top: 1em;
+  }
+}
+
+//
+// Success + failure
+// --------------------------------------
+.success-message,
+.failure-message {
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  line-height: 20px;
+  margin-bottom: 0;
+  padding: 0 20px 0 36px; // background width + 1em (16px)
+}
+
+.success-message {
+  @include background-image(image-url('icon/checked.svg'));
+}
+
+.failures {
+  margin-top: .75em;
+}
+
+.failure-message {
+  @include background-image(image-url('icon/unchecked.svg'));
+}
+
+.failure-list {
+  margin-bottom: 0;
+  margin-top: .5em;
+
+  > li {
+    margin-bottom: .25em;
+  }
+}

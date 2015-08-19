@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <title>Toronto Public Library</title>
+
+  <link href="/stylesheets/application.css" media="all" rel="stylesheet" />
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700' rel='stylesheet' type='text/css'>
+  <script src='/js/script.js'></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body class="site">
+
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="header">
+        <div class="header-brand">
+          <a href="/" class="brand-logo" id="logo">
+            <img alt="" src="/images/tpl-logo.svg">
+            <span class="sr-only">Toronto Public Library home</span>
+          </a>
+        </div>
+        <div class="header-account">
+          <div class="dropdown user-dropdown">
+            <button class="dropdown-toggle hidden-mobile" role="button" id="desktop-user" data-toggle="dropdown">
+              Account
+              <span class="user-name"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="desktop-user">
+              <li><a role="menuitem" tabIndex="-1" href="/settings">Account Settings</a></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+        <nav class="header-navigation">
+          <ul class="menu menu-horizontal mobile-menu hidden-desktop">
+            <li><button class="menu-item icon icon-user" data-toggle="dropdown" data-target="#mobile-user-dropdown"><span class="sr-only">Account</span></button></li>
+            <li><a href="http://www.torontopubliclibrary.ca" class="menu-item icon icon-location"><span class="sr-only">Find a Location</span></a></li>
+            <li><a href="http://www.torontopubliclibrary.ca" class="menu-item icon icon-search"><span class="sr-only">Search</span></a></li>
+            <li><button class="menu-item icon icon-menu" data-toggle="dropdown" data-target="#mobile-menu-dropdown"><span class="sr-only">Menu</span></button></li>
+          </ul>
+          <ul class="menu site-menu is-collapsed">
+            <li class="hidden-desktop">
+              <button class="close" id="site-menu-collapse">&times;</button>
+            </li>
+            <li>
+              <div class="dropdown">
+                <button class="menu-item dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                  Browse
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu hidden" role="menu" aria-labelledby="dropdownMenu1">
+                  <li><a role="menuitem" tabIndex="-1" href="#">Action</a></li>
+                  <li><a role="menuitem" tabIndex="-1" href="#">Another action</a></li>
+                  <li><a role="menuitem" tabIndex="-1" href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a role="menuitem" tabIndex="-1" href="#">Separated link</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#" class="menu-item">Programs</a></li>
+            <li><a href="#" class="menu-item">Locations</a></li>
+            <li><a href="#" class="menu-item">Contact</a></li>
+            <li>
+              <div class="search-form">
+                <input type="search" placeholder="Find books, movies, programs..." />
+                <input type="submit" value="Search" class="btn btn-tertiary" />
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-navigation-mobile hidden-desktop">
+        <nav class="dropdown dropdown-mobile" id="mobile-user-dropdown">
+          <ul class="dropdown-menu" role="menu">
+            <li><a class="menu-item" role="menuitem" href="/">Account</a></li>
+            <li><a class="menu-item" role="menuitem" href="/settings">Settings</a></li>
+            <li></li>
+          </ul>
+        </nav>
+        <nav class="dropdown dropdown-mobile" id="mobile-menu-dropdown">
+          <ul class="dropdown-menu" role="menu">
+            <li><a class="menu-item" role="menuitem" href="#">Browse</a></li>
+            <li><a class="menu-item" role="menuitem" href="#">Programs</a></li>
+            <li><a class="menu-item" role="menuitem" href="#">Locations</a></li>
+            <li><a class="menu-item" role="menuitem" href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <%= yield %>
+
+</body>
+</html>

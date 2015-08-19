@@ -1,0 +1,20 @@
+{
+  "name": "TPL-Account",
+  "version": "0.0.1",
+  "homepage": "https://github.com/tpl-eservices/TPL-Account",
+  "authors": [
+    "Louis St-Amour <lstamour@torontopubliclibrary.ca>",
+    "Ian Strang <istrang@torontopubliclibrary.ca>"
+  ],
+  "license": "Copyright",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery.customSelect": "*"
+  }
+}

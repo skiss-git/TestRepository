@@ -1,0 +1,64 @@
+* {
+  @include box-sizing(border-box);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $font-sans-serif;
+  font-size: 14px;
+
+  @include breakpoint($bp-desktop) {
+    font-size: 16px;
+  }
+}
+
+a {
+  color: palette(primary);
+  text-decoration: none;
+
+  &:hover {
+    color: palette(primary, dark);
+  }
+}
+
+strong {
+  font-weight: 600;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h1,
+.h1 {
+  @include font-size(h1);
+}
+
+h2,
+.h2 {
+  @include font-size(h2);
+}
+
+h3,
+.h3 {
+  @include font-size(h3);
+}
+
+h4,
+.h4 {
+  @include font-size(h4);
+}
+
+h5,
+.h5 {
+  @include font-size(h5);
+}

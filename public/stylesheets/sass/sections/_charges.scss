@@ -1,0 +1,59 @@
+//
+// Charges structure
+// --------------------------------------
+
+
+// Charge
+// --------------------------------------
+.charge {
+}
+
+.charge-header {
+  + .charge-item {
+    margin-top: 1em;
+  }
+}
+
+.charge-title {
+  margin-bottom: .1em;
+  margin-top: 0;
+  @include font-size(h5);
+}
+
+.charge-date {
+  margin-bottom: 0;
+}
+
+
+// Charge panel
+// --------------------------------------
+.charge-panel {
+  .panel-content,
+  .panel-meta {
+    height: auto;
+  }
+
+  .panel-meta {
+    text-align: right;
+  }
+}
+
+
+// Charges summary panel
+// --------------------------------------
+.charges-summary-panel {
+  margin-bottom: 2em;
+
+  .table-content {
+    text-align: right;
+  }
+
+  .credit-card,
+  .btn {
+    margin-top: .25em;
+  }
+
+  .btn {
+    display: inline-block;
+  }
+}

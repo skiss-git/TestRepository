@@ -1,0 +1,105 @@
+//
+// Resources
+// --------------------------------------
+// http://thesassway.com/advanced/modular-css-naming-conventions
+
+// Usage: palette(palette, tone)
+@function palette($palette, $tone: 'base') {
+  @return map-get(map-get($palettes, $palette), $tone);
+}
+
+// Usage: bp(size)
+@function bp($size: 'md') {
+  @return map-get($breakpoints, $size);
+}
+
+// Usage: @include font-size(h1)
+@mixin font-size($size) {
+  @include font-size-rem(map-get($font-sizes, $size));
+}
+
+// Usage: @include font-size-rem(size)
+@mixin font-size-rem($size: 1.6) {
+  font-size: ($size * 10) + px;
+  font-size: $size + rem;
+}
+
+// Usage: @include button(color, text);
+@mixin button($color, $text: #fff) {
+  .btn-#{$color},
+  %btn-#{$color} {
+    background-color: palette($color);
+    border-bottom-color: palette($color, light);
+
+    &,
+    &:hover,
+    &:active {
+      color: $text;
+    }
+
+    &:hover {
+      background-color: palette($color, light);
+      border-bottom-color: palette($color);
+    }
+
+    &:active,
+    &:focus {
+      border-bottom-color: palette($color, light);
+    }
+  }
+}
+
+@mixin display-flex {
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+@mixin position-sticky {
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+  position: sticky;
+}
+
+@mixin clearfix {
+  &:after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+
+// https://github.com/michaelsacca/Compass-Placeholder-Text-Mixin/blob/master/_placeholderText.scss
+@mixin input-placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &:-ms-input-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+
+// https://github.com/twbs/bootstrap-sass/blob/0b943fcb1700da5e8053797d26944a8ea2e4fb85/vendor/assets/stylesheets/bootstrap/mixins/_vendor-prefixes.scss
+@mixin transition-transform($transition...) {
+  -webkit-transition: -webkit-transform $transition;
+  -moz-transition: -moz-transform $transition;
+  -o-transition: -o-transform $transition;
+  transition: transform $transition;
+}
+
+@mixin keyframe () {
+  @-webkit-keyframes preload {
+    @content;
+  }
+
+  @-moz-keyframes preload {
+    @content;
+  }
+
+  @keyframes preload {
+    @content;
+  }
+}

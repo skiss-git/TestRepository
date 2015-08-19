@@ -1,0 +1,31 @@
+//
+// Checkouts structure
+// --------------------------------------
+.checkouts-header {
+  @extend %section-header;
+
+  + .checkouts {
+    margin-top: 1em;
+  }
+}
+
+.checkouts-title {
+  @extend %section-title;
+}
+
+
+// Checkouts panel
+// --------------------------------------
+.checkout-panel {
+  @include breakpoint(max-width $bp-desktop) {
+    .meta-action {
+      float: right;
+    }
+  }
+
+  @include breakpoint($bp-desktop) {
+    .panel-content {
+      min-height: 275px;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+.empty {
+  background-position: 0 .25em;
+  background-repeat: no-repeat;
+  background-size: 5em auto;
+  margin-top: .75em;
+  min-height: 5em;
+  padding-left: 6em;
+
+  @include breakpoint($bp-desktop) {
+    background-size: 6em auto;
+    margin-top: 1em;
+    min-height: 6em;
+    padding-left: 8em;
+  }
+
+  &.empty-page {
+    min-height: 7em;
+  }
+}
+
+.empty-content {
+  @include font-size(xs);
+
+  p {
+    margin-bottom: .5em;
+  }
+
+  :last-child {
+    margin-bottom: 0;
+  }
+
+  @include breakpoint($bp-desktop) {
+    @include font-size(sm);
+  }
+}
+
+.empty-checkouts {
+  @include background-image(image-url('empty/checkout.png'));
+}
+
+.empty-holds {
+  @include background-image(image-url('empty/pending.png'));
+}
+
+.empty-holds-ready {
+  @include background-image(image-url('empty/ready.png'));
+}
+
+.empty-holds-transit {
+  @include background-image(image-url('empty/transit.png'));
+}
+
+.empty-holds-pending {
+  @include background-image(image-url('empty/pending.png'));
+}
+
+.empty-charges {
+  @include background-image(image-url('empty/charges.png'));
+}

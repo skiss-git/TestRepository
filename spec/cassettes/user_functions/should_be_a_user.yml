@@ -1,0 +1,174 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://tplwsapp-d2-1a.staff.local:8080/TPLWS/rest/v1/users/5855000/checkouts
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Tplws-Authenticate:
+      - AQIC5wM2LY4SfczEENwpO0HCMu5ee2I2N-IBSttg4Ev9DnI.*AAJTSQACMDIAAlNLABQtNjQyNjMxNjUyNzkyMDE1ODEzMgACUzEAAjAx*
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 23 Jun 2015 20:06:05 GMT
+    body:
+      encoding: UTF-8
+      string: '[{"id":"37131148082753","item":{"id":"2910296","url":"/detail.jsp?R\u003d2910296","title":"Lions","author":"Gagne,
+        Tammy.","format":{"type":"Book"},"circulatingCopies":31,"isbn":["9781429676434"],"upc":null},"holding":{"barcode":"37131148082753","callNumber":"599.757
+        GAG","system":null,"itemLocation":{"id":"CL","description":"North York Central
+        Library"}},"overdue":false,"overdueInfo":{"chargeCode":null,"description":null,"amount":null},"checkoutDate":"2015-06-05","dueDate":"2015-06-26","lastRenewedDate":null,"renewals":0,"renewalsRemaining":2},{"id":"37131113154942","item":{"id":"2633757","url":"/detail.jsp?R\u003d2633757","title":"Lions","author":"Dineen,
+        Jacqueline.","format":{"type":"Book"},"circulatingCopies":36,"isbn":["9781605961507","9781605961514"],"upc":null},"holding":{"barcode":"37131113154942","callNumber":"599.757
+        DIN","system":null,"itemLocation":{"id":"CL","description":"North York Central
+        Library"}},"overdue":false,"overdueInfo":{"chargeCode":null,"description":null,"amount":null},"checkoutDate":"2015-06-05","dueDate":"2015-06-26","lastRenewedDate":null,"renewals":0,"renewalsRemaining":2},{"id":"37131093541662","item":{"id":"2575866","url":"/detail.jsp?R\u003d2575866","title":"Lions
+        [videorecording]","author":"Animal Planet (Television network)","format":{"type":"DVD"},"circulatingCopies":6,"isbn":null,"upc":["796019821414"]},"holding":{"barcode":"37131093541662","callNumber":"599.757
+        LIO","system":null,"itemLocation":{"id":"AB","description":"Albion"}},"overdue":true,"overdueInfo":{"chargeCode":"OVERDUE","description":"Item
+        overdue","amount":"3.00"},"checkoutDate":"2015-06-05","dueDate":"2015-06-16","lastRenewedDate":"2015-06-09","renewals":2,"renewalsRemaining":0},{"id":"37131025941246","item":{"id":"325002","url":"/detail.jsp?R\u003d325002","title":"Lions","author":"Markle,
+        Sandra.","format":{"type":"Book"},"circulatingCopies":9,"isbn":["1575057271"],"upc":null},"holding":{"barcode":"37131025941246","callNumber":"599.757
+        MAR","system":null,"itemLocation":{"id":"BB","description":"Brookbanks"}},"overdue":false,"overdueInfo":{"chargeCode":null,"description":null,"amount":null},"checkoutDate":"2015-06-05","dueDate":"2015-06-26","lastRenewedDate":null,"renewals":0,"renewalsRemaining":2},{"id":"37131141394353","item":{"id":"2872697","url":"/detail.jsp?R\u003d2872697","title":"Big
+        cats : in search of lions, leopards, cheetahs, and tigers","author":"Bloom,
+        Steve, 1953-","format":{"type":"Book"},"circulatingCopies":61,"isbn":["9780500650042","0500650047"],"upc":null},"holding":{"barcode":"37131141394353","callNumber":"599.75
+        BLO","system":null,"itemLocation":{"id":"CL","description":"North York Central
+        Library"}},"overdue":false,"overdueInfo":{"chargeCode":null,"description":null,"amount":null},"checkoutDate":"2015-06-05","dueDate":"2015-06-26","lastRenewedDate":null,"renewals":0,"renewalsRemaining":2},{"id":"37131104890991","item":{"id":"2503051","url":"/detail.jsp?R\u003d2503051","title":"Lions","author":"Hanel,
+        Rachael.","format":{"type":"Book"},"circulatingCopies":44,"isbn":["9781583416563"],"upc":null},"holding":{"barcode":"37131104890991","callNumber":"599.757
+        HAN","system":null,"itemLocation":{"id":"CL","description":"North York Central
+        Library"}},"overdue":false,"overdueInfo":{"chargeCode":null,"description":null,"amount":null},"checkoutDate":"2015-06-05","dueDate":"2015-06-26","lastRenewedDate":null,"renewals":0,"renewalsRemaining":2},{"id":"37131121481220","item":{"id":"2704002","url":"/detail.jsp?R\u003d2704002","title":"Born
+        wild : the extraordinary story of one man\u0027s passion for lions and for
+        Africa","author":"Fitzjohn, Tony.","format":{"type":"Book"},"circulatingCopies":8,"isbn":["9780141048567","0141048565"],"upc":null},"holding":{"barcode":"37131121481220","callNumber":"333.95416
+        FIT","system":null,"itemLocation":{"id":"CL","description":"North York Central
+        Library"}},"overdue":true,"overdueInfo":{"chargeCode":"OVERDUE","description":"Item
+        overdue","amount":"9.20"},"checkoutDate":"2015-06-05","dueDate":"2015-05-27","lastRenewedDate":null,"renewals":0,"renewalsRemaining":2},{"id":"37131138609573","item":{"id":"2881613","url":"/detail.jsp?R\u003d2881613","title":"Big
+        cats [videorecording]","author":"Tate, Alex.","format":{"type":"DVD"},"circulatingCopies":6,"isbn":["9781608836529","1608836525"],"upc":["841887016551"]},"holding":{"barcode":"37131138609573","callNumber":"599.75
+        BIG","system":null,"itemLocation":{"id":"CL","description":"North York Central
+        Library"}},"overdue":true,"overdueInfo":{"chargeCode":"OVERDUE","description":"Item
+        overdue","amount":"9.00"},"checkoutDate":"2015-06-05","dueDate":"2015-06-12","lastRenewedDate":null,"renewals":0,"renewalsRemaining":2},{"id":"37131141342980","item":{"id":"2839882","url":"/detail.jsp?R\u003d2839882","title":"Small
+        wild cats : the animal answer guide","author":"Sanderson, James G., 1949-","format":{"type":"Book"},"circulatingCopies":6,"isbn":["9780801898846","9780801898853","0801898846","0801898854"],"upc":null},"holding":{"barcode":"37131141342980","callNumber":"599.75
+        SAN","system":null,"itemLocation":{"id":"CL","description":"North York Central
+        Library"}},"overdue":false,"overdueInfo":{"chargeCode":null,"description":null,"amount":null},"checkoutDate":"2015-06-05","dueDate":"2015-06-26","lastRenewedDate":"2015-06-05","renewals":2,"renewalsRemaining":0},{"id":"37131116550310","item":{"id":"2808270","url":"/detail.jsp?R\u003d2808270","title":"ZooBorns
+        cats! : the newest, cutest kittens and cubs from the world\u0027s zoos","author":"Bleiman,
+        Andrew.","format":{"type":"Book"},"circulatingCopies":50,"isbn":["9781451651904","1451651902"],"upc":null},"holding":{"barcode":"37131116550310","callNumber":"599.75139
+        BLE","system":null,"itemLocation":{"id":"CL","description":"North York Central
+        Library"}},"overdue":false,"overdueInfo":{"chargeCode":null,"description":null,"amount":null},"checkoutDate":"2015-06-05","dueDate":"2015-06-26","lastRenewedDate":null,"renewals":0,"renewalsRemaining":2},{"id":"37131133789347","item":{"id":"2768967","url":"/detail.jsp?R\u003d2768967","title":"National
+        Geographic Kids everything big cats","author":"Carney, Elizabeth, 1981-","format":{"type":"Book"},"circulatingCopies":42,"isbn":["9781426308055","9781426308062"],"upc":null},"holding":{"barcode":"37131133789347","callNumber":"599.755
+        CAR","system":null,"itemLocation":{"id":"CL","description":"North York Central
+        Library"}},"overdue":false,"overdueInfo":{"chargeCode":null,"description":null,"amount":null},"checkoutDate":"2015-06-05","dueDate":"2015-06-26","lastRenewedDate":"2015-06-05","renewals":1,"renewalsRemaining":1},{"id":"37131096064720","item":{"id":"2505060","url":"/detail.jsp?R\u003d2505060","title":"Big
+        cats","author":"Franklin, Carolyn, 1956-","format":{"type":"Book"},"circulatingCopies":23,"isbn":["9781435825161"],"upc":null},"holding":{"barcode":"37131096064720","callNumber":"743.69755
+        FRA","system":null,"itemLocation":{"id":"CL","description":"North York Central
+        Library"}},"overdue":false,"overdueInfo":{"chargeCode":null,"description":null,"amount":null},"checkoutDate":"2015-06-05","dueDate":"2015-06-26","lastRenewedDate":null,"renewals":0,"renewalsRemaining":2},{"id":"37131084553460","item":{"id":"808441","url":"/detail.jsp?R\u003d808441","title":"Lions
+        : king of the beasts","author":"Zumbusch, Amelie von.","format":{"type":"Book"},"circulatingCopies":14,"isbn":["9781404236318","1404236317"],"upc":null},"holding":{"barcode":"37131084553460","callNumber":"599.757
+        ZUM","system":null,"itemLocation":{"id":"CL","description":"North York Central
+        Library"}},"overdue":false,"overdueInfo":{"chargeCode":null,"description":null,"amount":null},"checkoutDate":"2015-06-05","dueDate":"2015-06-26","lastRenewedDate":null,"renewals":0,"renewalsRemaining":2},{"id":"37131104836101","item":{"id":"2461792","url":"/detail.jsp?R\u003d2461792","title":"Planet
+        carnivore. Sharks \u0026 lions [videorecording]","author":"Baldwin, Alec,
+        1958-","format":{"type":"DVD"},"circulatingCopies":4,"isbn":["9781426291494"],"upc":["727994752240"]},"holding":{"barcode":"37131104836101","callNumber":"591.53
+        PLA","system":null,"itemLocation":{"id":"CL","description":"North York Central
+        Library"}},"overdue":true,"overdueInfo":{"chargeCode":"OVERDUE","description":"Item
+        overdue","amount":"9.00"},"checkoutDate":"2015-06-05","dueDate":"2015-06-12","lastRenewedDate":null,"renewals":0,"renewalsRemaining":2},{"id":"37131148046592","item":{"id":"2918245","url":"/detail.jsp?R\u003d2918245","title":"Little
+        lion","author":"Beake, Lesley.","format":{"type":"Book"},"circulatingCopies":23,"isbn":["9781847801890","1847801897"],"upc":null},"holding":{"barcode":"37131148046592","callNumber":"PIC
+        BEA","system":null,"itemLocation":{"id":"CL","description":"North York Central
+        Library"}},"overdue":false,"overdueInfo":{"chargeCode":null,"description":null,"amount":null},"checkoutDate":"2015-06-05","dueDate":"2015-06-26","lastRenewedDate":null,"renewals":0,"renewalsRemaining":2},{"id":"37131141440099","item":{"id":"2869176","url":"/detail.jsp?R\u003d2869176","title":"World\u0027s
+        greatest lion","author":"Helfer, Ralph.","format":{"type":"Book"},"circulatingCopies":47,"isbn":["9780399254178","039925417X"],"upc":null},"holding":{"barcode":"37131141440099","callNumber":"599.75709
+        HEL","system":null,"itemLocation":{"id":"CL","description":"North York Central
+        Library"}},"overdue":false,"overdueInfo":{"chargeCode":null,"description":null,"amount":null},"checkoutDate":"2015-06-05","dueDate":"2015-06-26","lastRenewedDate":null,"renewals":0,"renewalsRemaining":2},{"id":"37131127388122","item":{"id":"2818765","url":"/detail.jsp?R\u003d2818765","title":"The
+        lion king [videorecording]","author":null,"format":{"type":"DVD"},"circulatingCopies":42,"isbn":null,"upc":["786936812428"]},"holding":{"barcode":"37131127388122","callNumber":"FEATURE
+        LIO","system":null,"itemLocation":{"id":"ACD","description":"Albert Campbell"}},"overdue":true,"overdueInfo":{"chargeCode":"OVERDUE","description":"Item
+        overdue","amount":"1.50"},"checkoutDate":"2015-06-05","dueDate":"2015-06-19","lastRenewedDate":"2015-06-12","renewals":1,"renewalsRemaining":1},{"id":"37131148108749","item":{"id":"2809575","url":"/detail.jsp?R\u003d2809575","title":"The
+        Lion King [sound recording] : read-along storybook and CD","author":"Jeremiah,
+        David.","format":{"type":"Children Kit"},"circulatingCopies":59,"isbn":["9781423137689"],"upc":null},"holding":{"barcode":"37131148108749","callNumber":"STORIES
+        LIO","system":null,"itemLocation":{"id":"CL","description":"North York Central
+        Library"}},"overdue":false,"overdueInfo":{"chargeCode":null,"description":null,"amount":null},"checkoutDate":"2015-06-05","dueDate":"2015-06-26","lastRenewedDate":null,"renewals":0,"renewalsRemaining":2},{"id":"31385054243926","item":{"id":"493194","url":"/detail.jsp?R\u003d493194","title":"Lion","author":"Arnold,
+        Caroline.","format":{"type":"Book"},"circulatingCopies":2,"isbn":["0688126928","0688126936"],"upc":null},"holding":{"barcode":"31385054243926","callNumber":"599.74428
+        A","system":null,"itemLocation":{"id":"CE","description":"Centennial"}},"overdue":true,"overdueInfo":{"chargeCode":"OVERDUE","description":"Item
+        overdue","amount":"4.60"},"checkoutDate":"2015-06-05","dueDate":"2015-05-27","lastRenewedDate":null,"renewals":0,"renewalsRemaining":2},{"id":"37131043024348","item":{"id":"1515795","url":"/detail.jsp?R\u003d1515795","title":"Priya
+        jindag? : a?gata nibandho","author":"??ha, Saurabha.","format":{"type":"Book"},"circulatingCopies":1,"isbn":null,"upc":null},"holding":{"barcode":"37131043024348","callNumber":"891.474
+        SAH","system":null,"itemLocation":{"id":"CED","description":"Cedarbrae"}},"overdue":false,"overdueInfo":{"chargeCode":null,"description":null,"amount":null},"checkoutDate":"2015-06-12","dueDate":"2015-07-03","lastRenewedDate":null,"renewals":0,"renewalsRemaining":2}]'
+    http_version: 
+  recorded_at: Tue, 23 Jun 2015 20:06:08 GMT
+- request:
+    method: get
+    uri: http://tplwsapp-d2-1a.staff.local:8080/TPLWS/rest/v1/users/5855000/holds
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Tplws-Authenticate:
+      - AQIC5wM2LY4SfczEENwpO0HCMu5ee2I2N-IBSttg4Ev9DnI.*AAJTSQACMDIAAlNLABQtNjQyNjMxNjUyNzkyMDE1ODEzMgACUzEAAjAx*
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '673'
+      Date:
+      - Tue, 23 Jun 2015 20:06:05 GMT
+    body:
+      encoding: UTF-8
+      string: '[{"id":"27772829","expiration":"2017-06-11","readyDate":null,"readyDateExpiration":null,"status":"2","pickupLocation":{"id":"CL","description":"North
+        York Central Library"},"queuePosition":1,"queueLength":1,"suspendStartDate":null,"suspendEndDate":null,"item":{"id":"2379056","url":"/detail.jsp?R\u003d2379056","title":"Running
+        and philosophy : a marathon for the mind","author":"Austin, Michael W.","format":{"type":"Book"},"circulatingCopies":2,"isbn":["9781405171205","9781405167970"],"upc":null},"holding":{"barcode":"37131074466087","callNumber":"613.7172
+        AUS","system":null,"itemLocation":{"id":"JD","description":"Jane/Dundas"}},"available":false,"intransit":false}]'
+    http_version: 
+  recorded_at: Tue, 23 Jun 2015 20:06:09 GMT
+- request:
+    method: get
+    uri: http://tplwsapp-d2-1a.staff.local:8080/TPLWS/rest/v1/users/5855000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Tplws-Authenticate:
+      - AQIC5wM2LY4SfczEENwpO0HCMu5ee2I2N-IBSttg4Ev9DnI.*AAJTSQACMDIAAlNLABQtNjQyNjMxNjUyNzkyMDE1ODEzMgACUzEAAjAx*
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '757'
+      Date:
+      - Tue, 23 Jun 2015 20:06:08 GMT
+    body:
+      encoding: UTF-8
+      string: '{"id":"5855000","libraryBarcode":"27131029355395","userName":"Test","pin":null,"address":{"street":"123
+        Street Ave.","unit":null,"city":"TORONTO","province":"ON","postalCode":"M5N
+        1B9","phone":null,"email":"sgornall@torontopubliclibrary.ca"},"personalInfo":{"displayName":"Child,
+        Test","birthDate":"2010-06-07"},"circulationSummary":{"numberOfCheckouts":20,"numberOfHolds":1,"numberOfAvailableHolds":0,"numberOfOverdues":6,"numberOfInTransitHolds":0,"estimatedFines":"48.20","payableFines":"11.9"},"membershipInfo":{"expirationDate":"2016-06-05","status":"BLOCKED"},"homeBranch":{"id":"MAL","description":"Malvern"},"notificationSettings":{"preferredName":null,"telephone":null,"email":"sgornall@torontopubliclibrary.ca","sendBy":"EMAIL","reminders":false}}'
+    http_version: 
+  recorded_at: Tue, 23 Jun 2015 20:06:11 GMT
+recorded_with: VCR 2.9.3

@@ -1,0 +1,145 @@
+//
+// PLACEHOLDERS + VARIABLES
+// ----------------------------------------
+@include border-box-sizing;
+
+@include breakpoint($bp-desktop) {
+  %page {
+    @include span(18 of 24);
+  }
+
+  %panel {
+    // TODO: move this out of grid.css
+    @include display-flex;
+
+    .panel-content {
+      @include span(12 of 18 wide no-gutter);
+    }
+
+    .panel-meta {
+      @include span(last 6 of 18);
+    }
+  }
+}
+
+%container {
+  @include breakpoint($bp-tablet) {
+    @include container($container-tablet);
+  }
+
+  @include breakpoint($bp-desktop) {
+    @include container($container-desktop);
+  }
+
+  @include breakpoint($bp-retina) {
+    @include container($container-retina);
+  }
+}
+
+
+//
+// ALL
+// ----------------------------------------
+.container,
+.site-content {
+  @extend %container;
+}
+
+
+//
+// MOBILE
+// ----------------------------------------
+@include breakpoint(max-width $bp-desktop) {
+
+  // Header
+  // --------------------------------------
+  .header-brand {
+    @include span(9 of 24);
+  }
+
+  .header-navigation {
+    @include span(last 15 of 24);
+  }
+}
+
+
+//
+// DESKTOP
+// ----------------------------------------
+@include breakpoint($bp-desktop) {
+
+  // Header
+  // --------------------------------------
+  .header-brand {
+    @include span(4 of 24);
+  }
+
+  .header-account {
+    @include span(4 of 24);
+  }
+
+  .header-navigation {
+    @include span(last 16 of 24);
+  }
+
+  // Page
+  // --------------------------------------
+  .page-title {
+    @include span(18 of 24);
+  }
+
+  // Summary
+  // --------------------------------------
+  .summary-menu {
+    @include span(12 of 24);
+  }
+
+  .summary-content {
+    @include push(1 of 24);
+    @include span(8 of 24);
+  }
+
+  // Holds
+  // --------------------------------------
+  .holds-page {
+    @extend %page;
+  }
+
+  .hold-panel {
+    @extend %panel;
+  }
+
+  // Checkouts
+  // --------------------------------------
+  .checkouts-page {
+    @extend %page;
+  }
+
+  .checkout-panel {
+    @extend %panel;
+  }
+
+  // Charges
+  // --------------------------------------
+  .charges-page {
+    @extend %page;
+  }
+
+  .charges {
+    @include span(12 of 18);
+  }
+
+  .charges-about {
+    @include span(last 6 of 18);
+  }
+
+  .charge-panel {
+    @extend %panel;
+  }
+
+  // Settings
+  // --------------------------------------
+  .settings-page {
+    @include span(14 of 24);
+  }
+}

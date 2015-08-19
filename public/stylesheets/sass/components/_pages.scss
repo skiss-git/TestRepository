@@ -1,0 +1,119 @@
+//
+// Page variables
+// ----------------------------------------
+$page-header-padding:      1em;
+$page-header-padding-sm:   .75em;
+
+//
+// Page helpers
+// ----------------------------------------
+%toolbar-affix {
+  @include breakpoint($bp-desktop) {
+    &.affix {
+      top: 0;
+      z-index: 1000;
+
+      &:after {
+        box-shadow: 0 0 5px rgba(0, 0, 0, .25);
+        content: '';
+        display: block;
+        height: 1px;
+        margin-left: .5%;
+        margin-top: -1px;
+        position: relative;
+        width: 99%;
+        z-index: -1;
+      }
+    }
+  }
+}
+
+//
+// Page
+// ----------------------------------------
+.page {
+  @include breakpoint(max-width $bp-desktop) {
+    position: relative;
+  }
+
+  @include breakpoint($bp-desktop) {
+    background-color: palette(base, light);
+    padding-bottom: 2em;
+    padding-top: 2em;
+  }
+}
+
+// only used in mobile
+.page-header-affix {
+  @include breakpoint($bp-desktop) {
+    margin-bottom: 1.5em;
+  }
+}
+
+.page-header {
+  @include breakpoint(max-width $bp-desktop) {
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 40px;
+    z-index: 1000;
+    @include clearfix;
+    @include transition(top .3s ease);
+    @include transition-delay(.3s);
+  }
+
+  @include breakpoint($bp-desktop) {
+    @extend %toolbar-affix;
+  }
+}
+
+.page-title {
+  font-weight: 500;
+  letter-spacing: -1px;
+
+  @include breakpoint(max-width $bp-desktop) {
+    background-color: palette(primary);
+    color: #fff;
+    font-weight: 600;
+    height: $page-title-height;
+    line-height: 1.4;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 10px 11px; // TODO: find better solution?
+    @include font-size(h4);
+  }
+
+  @include breakpoint($bp-desktop) {
+    margin-top: 0;
+  }
+}
+
+.page-back {
+  display: block;
+
+  .page-title {
+    &:before {
+      content: '';
+      display: inline-block;
+      float: left;
+      height: 25px;
+      margin-right: .5em;
+      width: 14px;
+      @include background-image(image-url('icon/back.svg'));
+    }
+  }
+}
+
+.page-toolbar {
+  @include breakpoint($bp-desktop) {
+    @extend %toolbar-affix;
+  }
+}
+
+.page-content {
+  @include break;
+}
+
+.affix {
+  position: fixed;
+}

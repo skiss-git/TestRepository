@@ -1,0 +1,9 @@
+/**
+ * boostrap all user objects from server
+ */
+
+var app = app || {};
+
+(function() {
+  app.json = <%= raw (@json || {}).to_json %>;
+})();

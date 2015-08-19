@@ -1,0 +1,137 @@
+//
+// Buttons
+// --------------------------------------
+%btn,
+.btn {
+  border-bottom-style: solid;
+  border-bottom-width: .25em;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  font-weight: 500;
+  outline: 0;
+  padding: .5em 1.5em;
+
+  @include breakpoint($bp-desktop) {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+}
+
+// Buttons formats
+// --------------------------------------
+.btn-text,
+%btn-text {
+  background-color: transparent;
+  border: 0;
+  color: palette(primary);
+  cursor: pointer;
+  padding: 0;
+}
+
+.btn-text {
+  font-weight: 500;
+}
+
+.btn-link {
+  @extend %btn-text;
+}
+
+
+// Buttons sizes
+// --------------------------------------
+.btn-sm {}
+
+.btn-md {}
+
+.btn-lg {}
+
+// Buttons colours
+// --------------------------------------
+@each $color, $text in $buttons {
+  @include button($color, $text);
+}
+
+
+//
+// Sort button
+// --------------------------------------
+.sort-label {
+  display: inline-block;
+  margin-right: 1em;
+}
+
+.sort-btn {
+  display: inline-block;
+
+  @include breakpoint(max-width $bp-desktop) {
+    border-bottom-width: 0;
+    color: #fff;
+    line-height: $page-title-height;
+    min-width: 100px;
+    padding: 0 1em 0 0;
+    text-align: right;
+  }
+
+  @include breakpoint($bp-desktop) {
+    background-color: palette(base, lighter);
+    border-bottom-color: palette(base);
+    min-width: 180px;
+    padding: 6px 55px 6px 16px;
+    position: relative;
+  }
+}
+
+span.sort-btn {
+  @include breakpoint(max-width $bp-desktop) {
+    &:after {
+      content: '';
+      display: inline-block;
+      height: 10px;
+      margin-left: .5em;
+      margin-top: -3px;
+      vertical-align: middle;
+      width: 15px;
+      @include background(image-url('icon/sort.svg') right center no-repeat);
+    }
+  }
+
+  @include breakpoint($bp-desktop) {
+    &:before {
+      border-left: 1px solid palette(base);
+      content: '';
+      display: block;
+      float: right;
+      height: 34px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 34px;
+    }
+
+    &:after {
+      border: solid transparent;
+      border-color: rgba(0, 0, 0, 0);
+      border-top-color: palette(base, darker);
+      border-width: 6px;
+      content: '';
+      height: 0;
+      margin-left: -30px;
+      pointer-events: none;
+      position: absolute;
+      right: 11px;
+      top: 15px;
+      width: 0;
+    }
+  }
+}
+
+select.sort-btn {
+  z-index: 10;
+}
+
+// Sort link button
+// --------------------------------------
+.sort-link {
+  color: #fff;
+}

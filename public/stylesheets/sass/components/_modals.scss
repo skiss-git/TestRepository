@@ -1,0 +1,239 @@
+$modal-title-padding:         12px;
+$modal-inner-padding:         12px;
+$modal-title-line-height:     30px;
+
+//
+// Modals
+// --------------------------------------------------
+// .modal-open      - body class for killing the scroll
+// .modal           - container to scroll within
+// .modal-dialog    - positioning shell for the actual modal
+// .modal-content   - actual modal w/ bg and corners and shit
+
+.modal-open {
+  overflow: hidden;
+
+  .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+
+.modal {
+  bottom: 0;
+  display: none;
+  left: 0;
+  outline: 0;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1050;
+
+  &.fade .modal-dialog {
+    @include translate3d(0, 50%, 0);
+    @include transition-transform(.15s ease-out);
+  }
+
+  &.in .modal-dialog {
+    @include translate3d(0, 0, 0);
+  }
+
+  @include breakpoint($bp-desktop) {
+    &.fade .modal-dialog {
+      @include translate3d(0, -25%, 0);
+    }
+
+    &.in .modal-dialog {
+      @include translate3d(0, 0, 0);
+    }
+  }
+}
+
+
+.modal-dialog {
+  @include breakpoint(max-width $bp-desktop) {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  @include breakpoint($bp-desktop) {
+    margin: 30px auto;
+    position: relative;
+    width: 600px;
+
+    .btn {
+      + .btn {
+        margin-bottom: 0;
+        margin-left: 1em;
+      }
+    }
+  }
+}
+
+.modal-content {
+  background-color: #fff;
+  outline: 0;
+  position: relative;
+  @include background-clip(padding-box);
+
+  @include breakpoint(max-width $bp-desktop) {
+    height: 100%;
+    @include box-shadow(0 0 20px rgba(0, 0, 0, .25));
+  }
+}
+
+.modal-backdrop {
+  background-color: palette(base, darker);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1040;
+
+  &.fade {
+    @include opacity(0);
+  }
+
+  &.in {
+    @include opacity(.8);
+  }
+}
+
+.modal-header {
+  min-height: ($modal-title-padding + $modal-title-line-height);
+  padding: 1em 1.5em 0;
+  position: relative;
+}
+
+.modal-title {
+  line-height: $modal-title-line-height;
+  margin: 0;
+  @include font-size(h3);
+}
+
+.modal-body {
+  padding: 1em 1.5em;
+  position: relative;
+
+  // remove excess padding
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.modal-footer {
+  padding: 1em 1.5em 2em;
+  text-align: center;
+
+  .btn {
+    @include breakpoint(max-width $bp-desktop) {
+      display: block;
+      margin-bottom: .5em;
+      width: 100%;
+    }
+  }
+
+  @include breakpoint($bp-desktop) {
+    @include display-flex;
+
+    .btn {
+      flex: 1;
+    }
+  }
+}
+
+// Measure scrollbar width for padding body during modal show/hide
+.modal-scrollbar-measure {
+  height: 50px;
+  overflow: scroll;
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+}
+
+
+//
+// Modal windows
+// --------------------------------------------------
+
+// Change status
+// --------------------------------------------------
+.status-modal {
+  .status-actions {
+    padding-top: 1em;
+    text-align: center;
+  }
+}
+
+// Change pickup location
+// --------------------------------------------------
+.branch-modal,
+.location-modal {
+  .home-branch {
+    margin-bottom: 1.5em;
+  }
+
+  .branch-label {
+    margin-bottom: 1em;
+  }
+
+  .branch-name {
+    margin-bottom: .1em;
+    margin-top: 0;
+  }
+
+  .branch-address {
+    margin-bottom: 0;
+  }
+
+  .autocomplete-label {
+    margin-bottom: .5em;
+  }
+}
+
+//
+// Close
+// --------------------------------------------------
+.close {
+  background: transparent image-url('icon/close.svg') center center no-repeat;
+  background-size: 18px 18px;
+  border: 0;
+  height: 30px;
+  padding: 0;
+  width: 32px;
+  @include hide-text;
+
+  @include breakpoint($bp-desktop) {
+    height: 20px;
+    width: 22px;
+  }
+
+  // inside modal
+  .modal & {
+    margin-right: -10px;
+    position: absolute;
+    right: 1.5em;
+    top: 1em;
+
+    @include breakpoint($bp-desktop) {
+      margin-right: -2px;
+      margin-top: 5px;
+    }
+  }
+
+  // in alert
+  .alert & {
+    margin-right: -5px;
+    margin-top: -5px;
+
+
+    @include breakpoint($bp-desktop) {
+      margin-top: 2px;
+    }
+  }
+}

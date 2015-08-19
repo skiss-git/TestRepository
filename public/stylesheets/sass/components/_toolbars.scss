@@ -1,0 +1,43 @@
+.toolbar {
+  @include clearfix;
+  @include breakpoint(max-width $bp-desktop) {
+    background-color: #fff;
+  }
+
+  @include breakpoint($bp-desktop) {
+    background-color: palette(base, light);
+    padding: .75em 1em;
+  }
+
+  &.affix-bottom,
+  &.affix {
+    top: 0;
+    z-index: 10;
+  }
+}
+
+.toolbar-select {
+  float: left;
+  margin-top: 2px;
+}
+
+.toolbar-edit,
+.toolbar-sort {
+  float: right;
+}
+
+.toolbar-edit {
+  line-height: 32px;
+
+  @include breakpoint($bp-desktop) {
+    display: none;
+  }
+}
+
+.toolbar-sort {
+  @include breakpoint(max-width $bp-desktop) {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}

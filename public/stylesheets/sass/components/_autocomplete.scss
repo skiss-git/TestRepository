@@ -1,0 +1,46 @@
+//
+// Autocomplete component styles
+// --------------------------------------
+.autocomplete {
+  input[type="text"] {
+    border: 1px solid palette(primary, light);
+    padding: .75em;
+
+    // inside modal windows
+    .modal & {
+      width: 100%;
+    }
+  }
+
+  .hilite {
+    font-weight: 600;
+  }
+
+  &.none {
+    .autocomplete-results {
+      background-color: palette(primary, opaque);
+      color: palette(primary, dark);
+    }
+  }
+}
+
+.autocomplete-results {
+  background: #fff;
+  border: 1px solid palette(primary);
+  margin: -1px 0 1em;
+  padding: 0;
+}
+
+.autocomplete-result {
+  list-style-type: none;
+  margin-bottom: 0;
+  padding: .5em .75em;
+
+  & + & {
+    border-top: 1px solid palette(base, light);
+  }
+
+  &.selected {
+    background: palette(primary, opaque);
+  }
+}

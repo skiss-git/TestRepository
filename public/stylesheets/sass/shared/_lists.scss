@@ -1,0 +1,36 @@
+ul {
+  margin-top: 0;
+  padding-left: 20px;
+
+  > li {
+    margin-bottom: .5em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.list-unstyled,
+%list-unstyled {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.list-embedded,
+%list-embedded {
+  @extend %list-unstyled;
+
+  > li {
+    margin-bottom: .5em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+.item-unstyled {
+  list-style-type: none;
+}

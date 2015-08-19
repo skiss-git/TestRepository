@@ -1,0 +1,88 @@
+$tabs-menu-height-sm:    auto;
+$tabs-menu-height-lg:    auto;
+
+// work in conjunction with .menu
+
+.tabs {
+  background-color: #fff;
+  display: block;
+  width: 100%;
+  @include clearfix;
+
+  @include breakpoint($bp-desktop) {
+    border-bottom: 1px solid palette(base);
+    border-left: 1px solid palette(base);
+    border-right: 1px solid palette(base);
+  }
+
+  .toolbar + & {
+    padding-bottom: .75em;
+  }
+}
+
+.tabs-menu {
+  padding: .75em .75em 0;
+  @include clearfix;
+
+  > li {
+    width: 20%;
+
+    + li {
+      padding-left: .25em;
+    }
+  }
+
+  .menu-item {
+    background-color: palette(base, light);
+    border-color: palette(base);
+    color: palette(base, darker);
+    font-weight: 600;
+    height: $tabs-menu-height-sm;
+    line-height: 1.2;
+    padding: .75em .5em;
+    text-align: center;
+    white-space: normal;
+    width: 100%;
+    @include font-size(sm);
+
+    &:focus,
+    &:active {
+      border-color: palette(primary, light);
+    }
+
+    .checkout-tabs & {
+      @extend %btn-secondary;
+    }
+  }
+
+  button.menu-item {
+    border-bottom-style: solid;
+    border-bottom-width: .25em;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+  }
+
+  @include breakpoint($bp-desktop) {
+    padding-top: .75em;
+
+    > li {
+      + li {
+        padding-left: .5em;
+      }
+    }
+
+    .menu-item {
+      height: $tabs-menu-height-lg;
+
+      &.icon {
+        &:before {
+          display: inline-block;
+          margin-right: .5em;
+          margin-top: -.25em;
+        }
+      }
+    }
+  }
+
+}

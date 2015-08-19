@@ -1,0 +1,28 @@
+.header {
+  background-color: palette(primary, dark);
+  padding-bottom: .5em;
+  padding-top: .5em;
+  position: relative;
+  z-index: 1020;
+  @include clearfix;
+}
+
+
+.brand-logo {
+  &,
+  img {
+    display: block;
+  }
+
+  @include breakpoint(max-width $bp-desktop) {
+    margin-left: .75em;
+
+    img {
+      max-width: 100px;
+    }
+  }
+}
+
+
+.header-navigation-mobile {
+}

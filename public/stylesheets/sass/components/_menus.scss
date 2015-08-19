@@ -1,0 +1,338 @@
+//
+// Menu styles
+// --------------------------------------
+.menu {
+  @extend %list-unstyled;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.menu-item,
+%menu-item {
+  background-color: transparent;
+  border: 0;
+  display: block;
+  outline: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.menu-item-title {
+  color: palette(primary);
+  margin-bottom: 0;
+  margin-top: 0;
+  @include font-size(h5);
+}
+
+// Menu types
+// --------------------------------------
+.menu-horizontal,
+%menu-horizontal {
+  > li {
+    float: left;
+    margin-bottom: 0;
+  }
+}
+
+// Sub menu styles
+// --------------------------------------
+.sub-menu {
+  @extend %list-unstyled;
+}
+
+.sub-menu-title {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+
+//
+// Main site menu
+// --------------------------------------
+.site-menu {
+  > li {
+    line-height: 40px; // equal to logo height
+  }
+
+  @include breakpoint(max-width $bp-desktop) {
+    background-color: #fff;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    @include transition-transform(.5s ease);
+
+    &.is-collapsed {
+      @include translateY(-100%);
+    }
+  }
+
+  @include breakpoint($bp-desktop) {
+    margin-left: -2.4em;
+    text-align: right;
+
+    > li {
+      display: inline-block;
+      margin-bottom: 0;
+      vertical-align: top;
+
+      + li {
+        margin-left: 2.4em;
+      }
+
+      &:last-child {
+        float: right;
+      }
+    }
+
+    .menu-item {
+      color: #fff;
+    }
+  }
+}
+
+
+//
+// Mobile site menu
+// --------------------------------------
+.mobile-menu {
+  float: right;
+
+  > li {
+    border-left: 1px solid palette(primary);
+  }
+
+  .menu-item {
+    color: palette(base, lighter);
+    padding: .25em .75em;
+  }
+
+  .icon {
+    &:before {
+      background-position: center center;
+      background-repeat: no-repeat;
+      color: palette(base, lighter);
+      height: 20px;
+      width: 20px;
+    }
+  }
+
+  .icon-user {
+    &:before {
+      @include background-image(image-url('icon/menus/user.svg'));
+    }
+  }
+
+  .icon-location {
+    &:before {
+      @include background-image(image-url('icon/menus/location.svg'));
+    }
+  }
+
+  .icon-search {
+    &:before {
+      @include background-image(image-url('icon/menus/search.svg'));
+    }
+  }
+
+  .icon-menu {
+    &:before {
+      @include background-image(image-url('icon/menus/menu.svg'));
+    }
+  }
+}
+
+
+//
+// Account horizontal menu
+// --------------------------------------
+.account-menu-title {
+  color: palette(primary);
+  margin-bottom: .5em;
+  margin-top: 0;
+  @include font-size(h1);
+}
+
+.account-menu {
+  .menu-item {
+    border-bottom-color: transparent;
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    color: palette(primary, dark);
+    line-height: 40px;
+    margin-left: 2em;
+    padding-left: .25em;
+    padding-right: .25em;
+    @include font-size(md);
+
+    &:hover {
+      color: palette(primary, light);
+    }
+
+    &.active {
+      border-bottom-color: palette(primary, light);
+      font-weight: 700;
+    }
+
+    &.first {
+      margin-left: -.25em;
+    }
+
+    &.last {
+      padding-right: 0;
+    }
+  }
+}
+
+
+//
+// Summary menu
+// --------------------------------------
+.summary-menu {
+  > li {
+    margin-bottom: 1em;
+    border: 1px solid palette(base);
+  }
+
+  .menu-item {
+    background-color: palette(base, lighter);
+    border-left-color: palette(base, lighter);
+    border-left-style: solid;
+    border-left-width: .33em;
+    position: relative;
+
+    @include breakpoint($bp-desktop) {
+      padding: 1em;
+    }
+  }
+
+  a.menu-item {
+    &:after {
+      content: '';
+      display: block;
+      height: 24px;
+      position: absolute;
+      right: 1em;
+      top: 1em;
+      width: 14px;
+      @include background(image-url('icon/arrow.svg') no-repeat right center);
+    }
+  }
+
+  .menu-item-title {
+    line-height: 24px; // equal to arrow height
+
+    + .menu-item-content {
+      margin-bottom: .25em; // equal width below
+      padding-top: .75em;
+    }
+  }
+
+  .menu-item-content {
+    color: palette(base, darker);
+    font-weight: 400;
+  }
+
+  // Sub menu
+  // --------------------------------------
+  .sub-menu-title {
+    display: block;
+    float: left;
+    width: 40%;
+  }
+
+  .sub-menu {
+    > li {
+      margin-bottom: 0;
+
+      + li {
+        @include breakpoint($bp-desktop) {
+          margin-top: .25em;
+        }
+      }
+    }
+  }
+
+  .charges-payment {
+    margin-top: .5em;
+  }
+
+  // Mobile
+  // --------------------------------------
+  // TODO: clean up code for summary menu
+  @include breakpoint(max-width $bp-desktop) {
+    .menu-item {
+      padding: 1em 1em 1em .67em;
+    }
+
+    // TODO find better solution???
+    .hidden-desktop > .menu-item-title {
+      color: palette(base, dark);
+      padding-left: 1em;
+    }
+
+    .sub-menu-title {
+      width: 65%;
+    }
+
+    .sub-menu-title,
+    .sub-menu-content {
+      line-height: 24px; // equal to arrow height
+      @include font-size(h5);
+    }
+
+    // Checkouts sub menu
+    // --------------------------------------
+    .checkouts-sub-menu {
+      > li {
+        + li {
+          margin-top: .5em;
+        }
+      }
+
+      .sub-menu-title,
+      .sub-menu-content {
+        font-size: inherit;
+        line-height: normal;
+      }
+    }
+
+    // Holds sub menu
+    // --------------------------------------
+    .holds-sub-menu {
+      @include breakpoint(max-width $bp-desktop) {
+        > li {
+          + li {
+            border-top: 1px solid palette(base);
+          }
+        }
+      }
+    }
+  }
+
+
+  // Charges sub menu
+  // --------------------------------------
+  .charges-sub-menu {
+    > li {
+      @include clearfix;
+
+      + li {
+        margin-top: .75em;
+      }
+    }
+
+    .sub-menu-title {
+      width: 55%;
+    }
+
+    .sub-menu-title,
+    .sub-menu-content {
+      font-size: inherit;
+      line-height: normal;
+    }
+  }
+
+}

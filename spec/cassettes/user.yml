@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://tplwsapp-d2-1a.staff.local:8080/TPLWS/rest/v1/users/5855000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Tplws-Authenticate:
+      - AQIC5wM2LY4SfczEENwpO0HCMu5ee2I2N-IBSttg4Ev9DnI.*AAJTSQACMDIAAlNLABQtNjQyNjMxNjUyNzkyMDE1ODEzMgACUzEAAjAx*
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '757'
+      Date:
+      - Wed, 24 Jun 2015 15:03:10 GMT
+    body:
+      encoding: UTF-8
+      string: '{"id":"5855000","libraryBarcode":"27131029355395","userName":"Test","pin":null,"address":{"street":"123
+        Street Ave.","unit":null,"city":"TORONTO","province":"ON","postalCode":"M5N
+        1B9","phone":null,"email":"sgornall@torontopubliclibrary.ca"},"personalInfo":{"displayName":"Child,
+        Test","birthDate":"2010-06-07"},"circulationSummary":{"numberOfCheckouts":20,"numberOfHolds":1,"numberOfAvailableHolds":0,"numberOfOverdues":6,"numberOfInTransitHolds":0,"estimatedFines":"51.80","payableFines":"11.9"},"membershipInfo":{"expirationDate":"2016-06-05","status":"BLOCKED"},"homeBranch":{"id":"MAL","description":"Malvern"},"notificationSettings":{"preferredName":"Test Person","telephone":null,"email":"sgornall@torontopubliclibrary.ca","sendBy":"EMAIL","reminders":false}}'
+    http_version:
+  recorded_at: Wed, 24 Jun 2015 15:03:10 GMT
+recorded_with: VCR 2.9.3

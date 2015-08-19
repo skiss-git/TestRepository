@@ -1,0 +1,29 @@
+.countdown {
+  display: inline-block;
+  list-style-type: none;
+  margin-bottom: .25em;
+  padding-left: 0;
+  vertical-align: middle;
+  @include clearfix;
+
+  > li {
+    border: 1px solid palette(base);
+    float: left;
+    height: 9px;
+    margin-bottom: 0;
+    width: 9px;
+
+    &.countdown-active {
+      background-color: palette(base, dark);
+      border-color: palette(base, darker);
+    }
+
+    + li {
+      margin-left: .25em;
+    }
+  }
+
+  .status & {
+    margin-right: .75em;
+  }
+}

@@ -1,0 +1,28 @@
+.preload-backdrop {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.95);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  top: 0;
+  z-index: 1040;
+}
+
+.preload-body {
+  margin-top: 4em;
+  font-weight: 600;
+}
+
+.icon-preload {
+  &:before {
+    @include animation(preload 1s linear infinite);
+    @include animation-fill-mode(forwards);
+  }
+}
+
+@include keyframe() {
+  from { @include transform(rotate(0deg)); }
+  to { @include transform(rotate(360deg)); }
+}

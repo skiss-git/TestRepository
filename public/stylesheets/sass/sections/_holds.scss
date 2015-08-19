@@ -1,0 +1,41 @@
+//
+// Holds structure
+// --------------------------------------
+.holds {
+  margin-bottom: 2em;
+
+  &.is-empty {
+    margin-top: 0;
+  }
+}
+
+.holds-header {
+  @extend %section-header;
+}
+
+.holds-title {
+  @extend %section-title;
+  margin-bottom: .5em;
+}
+
+// Hold panel
+// --------------------------------------
+.hold-panel {
+  @include breakpoint($bp-desktop) {
+    .panel-content {
+      height: 245px;
+    }
+  }
+}
+
+.hold {
+  .meta {
+    @include breakpoint(max-width $bp-desktop) {
+      //padding-bottom: 2em;
+    }
+
+    @include breakpoint($bp-desktop) {
+      padding-bottom: 3.25em;
+    }
+  }
+}

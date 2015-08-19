@@ -1,0 +1,10 @@
+<div class="react-root"></div>
+
+<script>
+var app = app || {};
+
+(function() {
+  app.json = <%= (@bootstrapInfo || {}).to_json %>;
+  app.init();
+})();
+</script>

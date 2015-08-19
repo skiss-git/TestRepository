@@ -1,0 +1,104 @@
+//
+// Typography
+$font-serif:         'Georgia', Times New Roman, serif;
+$font-sans-serif:    'Open Sans', Helvetica, Arial, sans-serif;
+$font-sizes: (
+  lg:      2.1,
+  md:      1.6,
+  sm:      1.4,
+  xs:      1.3,
+  h1:      2.8,
+  h2:      2.4,
+  h3:      2.1,
+  h4:      1.9,
+  h5:      1.8,
+  h6:      1.5
+);
+
+
+//
+// Colour
+$palettes: (
+  base: (
+    lighter:  rgb(255, 255, 255),
+    light:    rgb(239, 236, 237),
+    base:     rgb(202, 201, 201),
+    dark:     rgb(119, 118, 119),
+    darker:   rgb(80, 79, 81)
+  ),
+  primary: (
+    opaque:   rgb(242, 247, 252),
+    light:    rgb(74, 157, 214),
+    base:     rgb(18, 103, 170),
+    dark:     rgb(39, 54, 106)
+  ),
+  secondary: (
+    light:    rgb(113, 180, 67),
+    base:     rgb(84, 131, 59),
+    dark:     rgb(66, 99, 46)
+  ),
+  tertiary: (
+    base:     rgb(0, 173, 188)
+  ),
+  danger: (
+    base:     rgb(174, 35, 36),
+    dark:     darken(rgb(174, 35, 36), 10%)
+  ),
+  warning: (
+    base:     rgb(255, 215, 0), // TODO: change color
+    dark:     darken(rgb(255, 215, 0), 10%)
+  )
+);
+
+
+//
+// Buttons
+$buttons: (
+  base:       palette(base, darker),
+  primary:    #fff,
+  secondary:  #fff,
+  tertiary:   #fff
+);
+
+
+//
+// Grids
+$susy: (
+  columns: 24,
+  gutters: 1/2,
+  global-box-sizing: border-box
+);
+
+$bp-mobile:    0;
+$bp-tablet:    72em;
+$bp-desktop:   72em;
+$bp-retina:    96em;
+
+$container-mobile:     0;
+$container-tablet:     960px;
+$container-desktop:    1152px;
+$container-retina:     1366px;
+
+
+//
+// Affix
+$site-header-height:     60px;
+$page-title-height:      45px;
+$page-toolbar-height:    63px;
+$page-actions-height:    95px;
+
+
+
+
+//
+// deprecated
+$brand-warning-light:   #f05a33;
+$brand-warning:         #c14027;
+$brand-warning-dark:    #a03622;
+$brand-danger:          #e42a29;
+$brand-danger-dark:     #af2222;
+$brand-info-light:      #c86fc5;
+$brand-info:            #9d3e96;
+$brand-info-dark:       #732e71;
+$brand-alert:           #e71667;
+$brand-alert-dark:      #af1e55;

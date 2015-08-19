@@ -1,0 +1,31 @@
+.site {
+  color: palette(base, darker);
+  background-color: palette(base, light);
+
+  @include breakpoint(max-width $bp-desktop) {
+    padding-top: 40px + 44px;
+  }
+}
+
+.site-header {
+  background-color: palette(primary, dark);
+
+  @include breakpoint(max-width $bp-desktop) {
+    height: 40px;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1010;
+  }
+
+  @include breakpoint($bp-desktop) {
+    padding-bottom: 1em;
+    padding-top: 1em;
+  }
+}
+
+.site-account {
+  background-color: palette(base, lighter);
+  padding-top: 1.5em;
+}

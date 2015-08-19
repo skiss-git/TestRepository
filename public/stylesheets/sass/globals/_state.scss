@@ -1,0 +1,12 @@
+.collapse {
+  display: none;
+
+  &.in { display: block; }
+}
+
+.collapsing {
+  height: 0;
+  overflow: hidden;
+  position: relative;
+  @include transition(height .35s ease);
+}
